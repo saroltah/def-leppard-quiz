@@ -82,3 +82,6 @@ function showNext() {
 //show the result after last question
 
 // start again button refreshes the page
+function refreshPage() {
+  location.reload();
+}
