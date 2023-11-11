@@ -7,6 +7,7 @@ const nextQuestion = document.getElementById("next-question");
 const currentPoints = document.getElementById("current-points");
 const result = document.getElementById("result");
 const startAgain = document.getElementById("start-again");
+const optionButtons = document.getElementsByClassName("option-buttons");
 let i = -1;
 
 let allQuestions = [
@@ -34,15 +35,40 @@ function changeQuestion() {
   option3.innerHTML = allQuestions[i].third;
 }
 
+// add function to delete background
+
+function deleteBackgroundcolor() {
+  for (let optionButton of optionButtons) {
+    optionButton.classList.remove("right-background");
+    optionButton.classList.remove("wrong-background");
+    nextQuestion.style.backgroundColor = "transparent";
+  }
+}
 //if right button clicked, turn green, if wrong turn red.
 
+for (let optionButton of optionButtons) {
+  optionButton.addEventListener("click", function () {
+    let textValue = optionButton.textContent;
+    if (nextQuestion.style.backgroundColor !== "blue") {
+      if (textValue === allQuestions[i].right) {
+        optionButton.classList.add("right-background");
+        nextQuestion.style.backgroundColor = "blue";
+      } else {
+        optionButton.classList.add("wrong-background");
+        nextQuestion.style.backgroundColor = "blue";
+      }
+    }
+  });
+}
 //add one point score if right button is clicked
 
 //next question button loads the next question
 function showNext() {
   i = i + 1;
   changeQuestion();
+  deleteBackgroundcolor();
 }
+
 //show the result after last question
 
 // start again button refreshes the page
