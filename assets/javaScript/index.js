@@ -34,7 +34,6 @@ let allQuestions = [
     right: "last",
   },
 ];
-
 //change the question's inner HTML and change the option's inner HTML
 function changeQuestion() {
   question.innerHTML = allQuestions[i].question;
@@ -42,7 +41,6 @@ function changeQuestion() {
   option2.innerHTML = allQuestions[i].second;
   option3.innerHTML = allQuestions[i].third;
 }
-
 // add function to delete background
 
 function deleteBackgroundcolor() {
@@ -55,7 +53,7 @@ function deleteBackgroundcolor() {
 //if right button clicked, turn green, if wrong turn red.
 
 for (let optionButton of optionButtons) {
-  optionButton.addEventListener("click", function () {
+  optionButton.addEventListener("click", function ifCorrect() {
     let textValue = optionButton.textContent;
     if (nextQuestion.style.backgroundColor !== "blue") {
       if (textValue === allQuestions[i].right) {
@@ -86,6 +84,7 @@ function showNext() {
   changeQuestion();
   deleteBackgroundcolor();
   showResult();
+  nextQuestion.innerHTML = "Next";
 }
 
 //show the result after last question
