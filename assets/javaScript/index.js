@@ -8,6 +8,7 @@ const currentPoints = document.getElementById("current-points");
 const result = document.getElementById("result");
 const startAgain = document.getElementById("start-again");
 const optionButtons = document.getElementsByClassName("option-buttons");
+const mainContent = document.getElementById("main-content");
 let i = -1;
 
 let allQuestions = [
@@ -24,6 +25,13 @@ let allQuestions = [
     second: "UK",
     third: "Sweden",
     right: "UK",
+  },
+  {
+    question: "last",
+    first: "last",
+    second: "last",
+    third: "last",
+    right: "last",
   },
 ];
 
@@ -77,9 +85,21 @@ function showNext() {
   i = i + 1;
   changeQuestion();
   deleteBackgroundcolor();
+  showResult();
 }
 
 //show the result after last question
+function showResult() {
+  let lastQuestion = allQuestions[allQuestions.length - 1];
+  console.log(currentPoints);
+  if (lastQuestion.question === question.innerHTML) {
+    mainContent.innerHTML = `<p> Your score is ${currentPoints.textContent}, good job, mate! </p>
+    <p id="result">
+          <button id="start-again" onclick="refreshPage()">Start again</button>
+        </p>
+    `;
+  }
+}
 
 // start again button refreshes the page
 function refreshPage() {
