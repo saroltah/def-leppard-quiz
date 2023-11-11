@@ -27,6 +27,99 @@ let allQuestions = [
     right: "UK",
   },
   {
+    question: "Which is their debut album?",
+    first: "Pyromania",
+    second: "On Through the Night",
+    third: "High'n' Dry",
+    right: "On Through the Night",
+  },
+  {
+    question: "What instrument is Phil Collen playing?",
+    first: "Keyboard",
+    second: "Bass",
+    third: "Guitar",
+    right: "Guitar",
+  },
+  {
+    question: "What happened at Rick Allan's accident?",
+    first: "He lost his finger",
+    second: "He lost his arm",
+    third: "He lost his leg",
+    right: "He lost his arm",
+  },
+  {
+    question: "On which album debuted 'Tonight' song?",
+    first: "Adrenalize",
+    second: "Hysteria",
+    third: "Retro active",
+    right: "Adrenalize",
+  },
+  {
+    question: "Which member died in 1991?",
+    first: "Steve Clark",
+    second: "Vivian Campbell",
+    third: "Pete Willis",
+    right: "Steve Clark",
+  },
+  {
+    question: "Continue the lyrics: Out of touch, out of reach, yeah... ",
+    first: "You can't hide, it's just a one-way street",
+    second: "Better start believin’",
+    third: "You could try to get closer to me",
+    right: "You could try to get closer to me",
+  },
+  {
+    question:
+      "Which of the album covers has a graphic of a black-and-white eye?",
+    first: "Euphoria",
+    second: "Diamond Star Halos",
+    third: "Yeah!",
+    right: "Diamond Star Halos",
+  },
+  {
+    question: "Who did they tour witch in 2023?",
+    first: "Skid Row",
+    second: "Mötley Crüe",
+    third: "Whitesnake",
+    right: "Mötley Crüe",
+  },
+  {
+    question: "Which pop star has sung duets with Def Leppard?",
+    first: "Taylor Swift",
+    second: "Lady Gaga",
+    third: "Camila Cabello",
+    right: "Taylor Swift",
+  },
+  {
+    question:
+      "How many Spotify listeners do they have on average / per month in 2023?",
+    first: "5.900.000",
+    second: "6.700.000",
+    third: "7.200.000",
+    right: "7.200.000",
+  },
+  {
+    question: "How many video clips do they published?",
+    first: "46",
+    second: "54",
+    third: "60",
+    right: "46",
+  },
+  {
+    question: "Which was the band's home country?",
+    first: "David Essex",
+    second: "Donny Osmond",
+    third: "David Cassidy",
+    right: "David Essex",
+  },
+  {
+    question: "Which book does not exist?",
+    first: "Def Leppard: Animal Instinct",
+    second: "Let's Get Rocked with Def Leppard",
+    third: "Adrenalized: Life, Def Leppard, and Beyond",
+    right: "Let's Get Rocked with Def Leppard",
+  },
+  {
     question: "last",
     first: "last",
     second: "last",
@@ -98,14 +191,33 @@ function showResult() {
   }
 
   if (lastQuestion.question === question.innerHTML) {
-    mainContent.innerHTML = `<p> Your score is ${currentPoints.textContent}, good job, mate! </p>
+    if (parseInt(currentPoints.textContent) < 7) {
+      mainContent.innerHTML = `<p> Congratulations!<br> You have reached ${currentPoints.textContent}
+ points. You might not be the biggest fan of this band, but it is never too late to become one. Check out the Def Leppard movie and catch up! 
+ </p>
     <p id="result">
           <button id="start-again" onclick="refreshPage()">Start again</button>
         </p>
     `;
+    } else if (parseInt(currentPoints.textContent) < 11) {
+      mainContent.innerHTML = `<p> Congratulations!<br> 
+You have reached ${currentPoints.textContent}
+ points. I believe you love Def Leppard, but you might have missed out on some events in the band’s life. Watch the Def Leppard movie and catch up! 
+ </p>
+    <p id="result">
+          <button id="start-again" onclick="refreshPage()">Start again</button>
+        </p>`;
+    } else if (parseInt(currentPoints.textContent) >= 11) {
+      mainContent.innerHTML = `<p> Congratulations!<br> 
+You have reached ${currentPoints.textContent}
+ points. That shows you are a true and loyal metalhead. Keep going on listening to good music! Rock on mate! Enjoy the Def Leppard movie as your reward! 
+ </p>
+    <p id="result">
+          <button id="start-again" onclick="refreshPage()">Start again</button>
+        </p>`;
+    }
   }
 }
-
 // start again button refreshes the page
 function refreshPage() {
   location.reload();
