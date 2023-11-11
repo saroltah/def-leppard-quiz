@@ -53,6 +53,7 @@ for (let optionButton of optionButtons) {
       if (textValue === allQuestions[i].right) {
         optionButton.classList.add("right-background");
         nextQuestion.style.backgroundColor = "blue";
+        addPoint();
       } else {
         optionButton.classList.add("wrong-background");
         nextQuestion.style.backgroundColor = "blue";
@@ -61,6 +62,15 @@ for (let optionButton of optionButtons) {
   });
 }
 //add one point score if right button is clicked
+function addPoint() {
+  for (let optionButton of optionButtons) {
+    let oldPoints = parseInt(currentPoints.innerText);
+
+    if (optionButton.classList.contains("right-background")) {
+      currentPoints.innerHTML = oldPoints + 1;
+    }
+  }
+}
 
 //next question button loads the next question
 function showNext() {
