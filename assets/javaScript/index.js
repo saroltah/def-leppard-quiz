@@ -80,17 +80,23 @@ function addPoint() {
 
 //next question button loads the next question
 function showNext() {
+  nextQuestion.innerHTML = "Next";
   i = i + 1;
   changeQuestion();
   deleteBackgroundcolor();
   showResult();
-  nextQuestion.innerHTML = "Next";
 }
 
+// change next button innerhtml before the last question
 //show the result after last question
 function showResult() {
+  let secondLastQuestion = allQuestions[allQuestions.length - 2];
   let lastQuestion = allQuestions[allQuestions.length - 1];
-  console.log(currentPoints);
+
+  if (secondLastQuestion.question === question.innerHTML) {
+    nextQuestion.innerHTML = "Show result";
+  }
+
   if (lastQuestion.question === question.innerHTML) {
     mainContent.innerHTML = `<p> Your score is ${currentPoints.textContent}, good job, mate! </p>
     <p id="result">
