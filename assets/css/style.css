@@ -1,14 +1,21 @@
 /* general */
-.body {
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
 .container {
   width: 95%;
-  max-width: 900px;
+  max-width: 600px;
   margin: 90px auto;
   border: 1px solid black;
   text-align: center;
 }
+
 /*intro*/
+
 h1 {
   font-size: 25px;
   margin-top: 40px;
@@ -24,6 +31,7 @@ h2,
 }
 
 /*quiz*/
+
 #question-area {
   margin: 20px 0px;
   font-size: 25px;
@@ -45,8 +53,13 @@ h2,
   margin: 0px 10px;
   border-radius: 30%;
 }
+button:hover,
+a:hover {
+  cursor: pointer;
+}
 
 /*outro*/
+
 #outro button,
 .result button {
   padding: 10px;
@@ -54,7 +67,6 @@ h2,
   margin: 30px 10px;
   border-radius: 30%;
 }
-
 #outro div {
   font-size: 25px;
   margin: 20px 0px 60px 0px;
@@ -62,8 +74,10 @@ h2,
 }
 
 /*result page*/
+
 .result h3 {
   font-size: 30px;
+  margin-top: 20px;
 }
 .result a {
   text-decoration: none;
@@ -77,11 +91,12 @@ h2,
 .result span {
   font-weight: bold;
 }
+
 /*works with functions*/
+
 .right-background {
   background-color: green;
 }
 .wrong-background {
   background-color: red;
 }
-/* laptop size font size: 130%*/
