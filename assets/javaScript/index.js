@@ -1,4 +1,4 @@
-//variables
+// variables
 
 const question = document.getElementById("question");
 const option1 = document.getElementById("option1");
@@ -6,13 +6,11 @@ const option2 = document.getElementById("option2");
 const option3 = document.getElementById("option3");
 const nextQuestion = document.getElementById("next-question");
 const currentPoints = document.getElementById("current-points");
-const result = document.getElementById("result");
-const startAgain = document.getElementById("start-again");
 const optionButtons = document.getElementsByClassName("option-buttons");
 const mainContent = document.getElementById("main-content");
 let i = -1;
 
-let allQuestions = [
+const allQuestions = [
   {
     question: "What year was Def Leppard formed?",
     first: "1976",
@@ -129,7 +127,7 @@ let allQuestions = [
   },
 ];
 
-//change the question's inner HTML and change the option's inner HTML
+// change the question's inner HTML and change the option's inner HTML
 
 function changeQuestion() {
   question.innerHTML = allQuestions[i].question;
@@ -148,10 +146,22 @@ function deleteBackgroundcolor() {
   }
 }
 
-//if right button clicked, turn green, if wrong turn red.
+// add one point score if right button is clicked
+
+function addPoint() {
+  for (let optionButton of optionButtons) {
+    let oldPoints = parseInt(currentPoints.innerText);
+
+    if (optionButton.classList.contains("right-background")) {
+      currentPoints.innerHTML = oldPoints + 1;
+    }
+  }
+}
+
+// if right button clicked, turn green, if wrong turn red.
 
 for (let optionButton of optionButtons) {
-  optionButton.addEventListener("click", function ifCorrect() {
+  optionButton.addEventListener("click", function () {
     let textValue = optionButton.textContent;
     if (nextQuestion.style.backgroundColor !== "blue") {
       if (textValue === allQuestions[i].right) {
@@ -166,30 +176,18 @@ for (let optionButton of optionButtons) {
   });
 }
 
-//add one point score if right button is clicked
-
-function addPoint() {
-  for (let optionButton of optionButtons) {
-    let oldPoints = parseInt(currentPoints.innerText);
-
-    if (optionButton.classList.contains("right-background")) {
-      currentPoints.innerHTML = oldPoints + 1;
-    }
-  }
-}
-
-//next question button loads the next question
+// next question button loads the next question
 
 function showNext() {
   nextQuestion.innerHTML = "Next";
-  i = i + 1;
+  i += 1;
   changeQuestion();
   deleteBackgroundcolor();
   showResult();
 }
 
 // change next button innerhtml before the last question
-//show the result after last question
+// show the result after last question
 
 function showResult() {
   let secondLastQuestion = allQuestions[allQuestions.length - 2];
@@ -258,5 +256,5 @@ function showResult() {
 // start again button refreshes the page
 
 function refreshPage() {
-  location.reload();
+  document.location.reload();
 }

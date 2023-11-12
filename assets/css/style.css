@@ -1,4 +1,6 @@
 /* general */
+.body {
+}
 .container {
   width: 95%;
   max-width: 900px;
