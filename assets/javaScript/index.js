@@ -207,7 +207,8 @@ function showResult() {
           one. Check out the
           <a
             href="https://www.youtube.com/watch?v=FEHaEuiN3CA&ab_channel=PederRoos"
-            target_blank
+            target="_blank"
+            aria-label="click to open a Youtube link to watch the Def Leppard:Hysteria movie, it opens in new tab"
             >Def Leppard movie</a
           >
           and catch up!
@@ -224,7 +225,7 @@ function showResult() {
           band’s life. Watch the
           <a
             href="https://www.youtube.com/watch?v=FEHaEuiN3CA&ab_channel=PederRoos"
-            target_blank
+            target="_blank"
             aria-label="click to open a Youtube link to watch the Def Leppard:Hysteria movie, it opens in new tab"
             >Def Leppard movie</a
           >
@@ -242,7 +243,8 @@ function showResult() {
           Rock on mate! Enjoy the
           <a
             href="https://www.youtube.com/watch?v=FEHaEuiN3CA&ab_channel=PederRoos"
-            target_blank
+            target="_blank
+            aria-label="click to open a Youtube link to watch the Def Leppard:Hysteria movie, it opens in new tab"
             >Def Leppard movie</a
           >
           as your reward!
