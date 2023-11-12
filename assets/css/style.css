@@ -1,6 +1,66 @@
+/* general */
+.container {
+  width: 95%;
+  max-width: 900px;
+  margin: 90px auto;
+  border: 1px solid black;
+  text-align: center;
+}
+/*intro*/
+h1 {
+  font-size: 25px;
+  margin-top: 40px;
+}
+h1 div {
+  font-size: 45px;
+}
+h2 {
+  font-size: 23px;
+  font-weight: normal;
+  padding: 10px;
+}
+
+/*quiz*/
+#question-area {
+  margin: 20px 0px;
+  font-size: 25px;
+  font-weight: bold;
+}
+#question {
+  padding: 10px;
+}
+#answers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#answers button {
+  padding: 15px;
+  font-size: 20px;
+  margin: 0px 10px;
+  border-radius: 30%;
+}
+
+/*outro*/
+#outro button {
+  padding: 10px;
+  font-size: 25px;
+  margin: 30px 10px;
+  border-radius: 30%;
+}
+
+#outro div {
+  font-size: 25px;
+  margin: 20px 0px 60px 0px;
+  font-weight: bold;
+}
+/*works with functions*/
 .right-background {
   background-color: green;
 }
 .wrong-background {
   background-color: red;
 }
+/* laptop size font size: 130%*/

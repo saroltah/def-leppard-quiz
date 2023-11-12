@@ -7,30 +7,36 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <section id="intro">
-      <h1>The Ultimate Def Leppard Quiz</h1>
-      <h2>Test your knowledge and find out if you are a true fan</h2>
-    </section>
-    <section id="main-content">
-      <section id="quiz">
-        <div id="question-area">
-          <div id="question">Are you ready to start the quiz?</div>
-        </div>
-        <div id="answer-content">
-          <div id="answers">
-            <button id="option1" class="option-buttons">
-              Let's get rocked!
-            </button>
-            <button id="option2" class="option-buttons">Hell yeah!</button>
-            <button id="option3" class="option-buttons">Bring it on!</button>
+    <div class="container">
+      <section id="intro">
+        <h1>
+          The Ultimate
+          <div>Def Leppard</div>
+          Quiz
+        </h1>
+        <h2>Test your knowledge and find out if you are a true fan</h2>
+      </section>
+      <section id="main-content">
+        <section id="quiz">
+          <div id="question-area">
+            <div id="question">Are you ready to start the quiz?</div>
           </div>
-        </div>
+          <div id="answer-content">
+            <div id="answers">
+              <button id="option1" class="option-buttons">
+                Let's get rocked!
+              </button>
+              <button id="option2" class="option-buttons">Hell yeah!</button>
+              <button id="option3" class="option-buttons">Bring it on!</button>
+            </div>
+          </div>
+        </section>
+        <section id="outro">
+          <button id="next-question" onclick="showNext()">Start</button>
+          <div id="points">Points: <span id="current-points">0</span>/15</div>
+        </section>
       </section>
-      <section id="outro">
-        <button id="next-question" onclick="showNext()">Start</button>
-        <div id="points">Points: <span id="current-points">0</span>/15</div>
-      </section>
-    </section>
+    </div>
     <script src="assets/javaScript/index.js"></script>
   </body>
 </html>

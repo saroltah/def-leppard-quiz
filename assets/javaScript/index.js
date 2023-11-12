@@ -1,4 +1,5 @@
 //variables
+
 const question = document.getElementById("question");
 const option1 = document.getElementById("option1");
 const option2 = document.getElementById("option2");
@@ -127,13 +128,16 @@ let allQuestions = [
     right: "last",
   },
 ];
+
 //change the question's inner HTML and change the option's inner HTML
+
 function changeQuestion() {
   question.innerHTML = allQuestions[i].question;
   option1.innerHTML = allQuestions[i].first;
   option2.innerHTML = allQuestions[i].second;
   option3.innerHTML = allQuestions[i].third;
 }
+
 // add function to delete background
 
 function deleteBackgroundcolor() {
@@ -143,6 +147,7 @@ function deleteBackgroundcolor() {
     nextQuestion.style.backgroundColor = "transparent";
   }
 }
+
 //if right button clicked, turn green, if wrong turn red.
 
 for (let optionButton of optionButtons) {
@@ -160,7 +165,9 @@ for (let optionButton of optionButtons) {
     }
   });
 }
+
 //add one point score if right button is clicked
+
 function addPoint() {
   for (let optionButton of optionButtons) {
     let oldPoints = parseInt(currentPoints.innerText);
@@ -172,6 +179,7 @@ function addPoint() {
 }
 
 //next question button loads the next question
+
 function showNext() {
   nextQuestion.innerHTML = "Next";
   i = i + 1;
@@ -182,6 +190,7 @@ function showNext() {
 
 // change next button innerhtml before the last question
 //show the result after last question
+
 function showResult() {
   let secondLastQuestion = allQuestions[allQuestions.length - 2];
   let lastQuestion = allQuestions[allQuestions.length - 1];
@@ -192,33 +201,35 @@ function showResult() {
 
   if (lastQuestion.question === question.innerHTML) {
     if (parseInt(currentPoints.textContent) < 7) {
-      mainContent.innerHTML = `<p> Congratulations!<br> You have reached ${currentPoints.textContent}
- points. You might not be the biggest fan of this band, but it is never too late to become one. Check out the Def Leppard movie and catch up! 
- </p>
-    <p id="result">
-          <button id="start-again" onclick="refreshPage()">Start again</button>
-        </p>
-    `;
+      mainContent.innerHTML = `<p> Congratulations!<br>
+      You have reached ${currentPoints.textContent} point(s).
+      You might not be the biggest fan of this band, but it is never too late to become one. Check out the Def Leppard movie and catch up! 
+      </p>
+      <p id="result">
+      <button id="start-again" onclick="refreshPage()">Start again</button>
+      </p>`;
     } else if (parseInt(currentPoints.textContent) < 11) {
-      mainContent.innerHTML = `<p> Congratulations!<br> 
-You have reached ${currentPoints.textContent}
- points. I believe you love Def Leppard, but you might have missed out on some events in the band’s life. Watch the Def Leppard movie and catch up! 
- </p>
-    <p id="result">
-          <button id="start-again" onclick="refreshPage()">Start again</button>
-        </p>`;
+      mainContent.innerHTML = `<p> Congratulations!<br>
+      You have reached ${currentPoints.textContent} points.
+      I believe you love Def Leppard, but you might have missed out on some events in the band’s life. Watch the Def Leppard movie and catch up! 
+      </p>
+      <p id="result">
+      <button id="start-again" onclick="refreshPage()">Start again</button>
+      </p>`;
     } else if (parseInt(currentPoints.textContent) >= 11) {
       mainContent.innerHTML = `<p> Congratulations!<br> 
-You have reached ${currentPoints.textContent}
- points. That shows you are a true and loyal metalhead. Keep going on listening to good music! Rock on mate! Enjoy the Def Leppard movie as your reward! 
- </p>
-    <p id="result">
-          <button id="start-again" onclick="refreshPage()">Start again</button>
-        </p>`;
+      You have reached ${currentPoints.textContent} points.
+      That shows you are a true and loyal metalhead. Keep going on listening to good music! Rock on mate! Enjoy the Def Leppard movie as your reward! 
+      </p>
+      <p id="result">
+      <button id="start-again" onclick="refreshPage()">Start again</button>
+      </p>`;
     }
   }
 }
+
 // start again button refreshes the page
+
 function refreshPage() {
   location.reload();
 }
