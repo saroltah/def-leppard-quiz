@@ -14,7 +14,8 @@ h1 {
 h1 div {
   font-size: 45px;
 }
-h2 {
+h2,
+.result p {
   font-size: 23px;
   font-weight: normal;
   padding: 10px;
@@ -44,7 +45,8 @@ h2 {
 }
 
 /*outro*/
-#outro button {
+#outro button,
+.result button {
   padding: 10px;
   font-size: 25px;
   margin: 30px 10px;
@@ -54,6 +56,23 @@ h2 {
 #outro div {
   font-size: 25px;
   margin: 20px 0px 60px 0px;
+  font-weight: bold;
+}
+
+/*result page*/
+.result h3 {
+  font-size: 30px;
+}
+.result a {
+  text-decoration: none;
+  font-size: 110%;
+  margin: 0px 10px;
+}
+.result p {
+  line-height: 30px;
+  text-align: justify;
+}
+.result span {
   font-weight: bold;
 }
 /*works with functions*/

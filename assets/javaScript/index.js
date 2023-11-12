@@ -14,7 +14,7 @@ let i = -1;
 
 let allQuestions = [
   {
-    question: "Which year was Def Leppard formed?",
+    question: "What year was Def Leppard formed?",
     first: "1976",
     second: "1978",
     third: "1992",
@@ -42,14 +42,14 @@ let allQuestions = [
     right: "Guitar",
   },
   {
-    question: "What happened at Rick Allan's accident?",
+    question: "What happened in Rick Allan's accident?",
     first: "He lost his finger",
     second: "He lost his arm",
     third: "He lost his leg",
     right: "He lost his arm",
   },
   {
-    question: "On which album debuted 'Tonight' song?",
+    question: "On which album did the song 'Tonight' debut?",
     first: "Adrenalize",
     second: "Hysteria",
     third: "Retro active",
@@ -78,7 +78,7 @@ let allQuestions = [
     right: "Diamond Star Halos",
   },
   {
-    question: "Who did they tour witch in 2023?",
+    question: "Who did they tour with in 2023?",
     first: "Skid Row",
     second: "Mötley Crüe",
     third: "Whitesnake",
@@ -107,7 +107,7 @@ let allQuestions = [
     right: "46",
   },
   {
-    question: "Which was the band's home country?",
+    question: "Who's song was originally the Def Leppard cover, Rock on? ",
     first: "David Essex",
     second: "Donny Osmond",
     third: "David Cassidy",
@@ -201,29 +201,56 @@ function showResult() {
 
   if (lastQuestion.question === question.innerHTML) {
     if (parseInt(currentPoints.textContent) < 7) {
-      mainContent.innerHTML = `<p> Congratulations!<br>
-      You have reached ${currentPoints.textContent} point(s).
-      You might not be the biggest fan of this band, but it is never too late to become one. Check out the Def Leppard movie and catch up! 
-      </p>
-      <p id="result">
-      <button id="start-again" onclick="refreshPage()">Start again</button>
-      </p>`;
+      mainContent.innerHTML = `<div class="result">
+        <h3>Congratulations!</h3>
+        <p>
+          You have reached <span>${currentPoints.textContent}</span> point(s). You might not
+          be the biggest fan of this band, but it is never too late to become
+          one. Check out the
+          <a
+            href="https://www.youtube.com/watch?v=FEHaEuiN3CA&ab_channel=PederRoos"
+            target_blank
+            >Def Leppard movie</a
+          >
+          and catch up!
+        </p>
+
+        <button id="start-again" onclick="refreshPage()">Start again</button>
+      </div>`;
     } else if (parseInt(currentPoints.textContent) < 11) {
-      mainContent.innerHTML = `<p> Congratulations!<br>
-      You have reached ${currentPoints.textContent} points.
-      I believe you love Def Leppard, but you might have missed out on some events in the band’s life. Watch the Def Leppard movie and catch up! 
-      </p>
-      <p id="result">
-      <button id="start-again" onclick="refreshPage()">Start again</button>
-      </p>`;
+      mainContent.innerHTML = `<div class="result">
+        <h3>Congratulations!</h3>
+        <p>
+          You have reached <span>${currentPoints.textContent}</span> points. I believe you
+          love Def Leppard, but you might have missed out on some events in the
+          band’s life. Watch the
+          <a
+            href="https://www.youtube.com/watch?v=FEHaEuiN3CA&ab_channel=PederRoos"
+            target_blank
+            >Def Leppard movie</a
+          >
+          and catch up!
+        </p>
+
+        <button id="start-again" onclick="refreshPage()">Start again</button>
+      </div>`;
     } else if (parseInt(currentPoints.textContent) >= 11) {
-      mainContent.innerHTML = `<p> Congratulations!<br> 
-      You have reached ${currentPoints.textContent} points.
-      That shows you are a true and loyal metalhead. Keep going on listening to good music! Rock on mate! Enjoy the Def Leppard movie as your reward! 
-      </p>
-      <p id="result">
-      <button id="start-again" onclick="refreshPage()">Start again</button>
-      </p>`;
+      mainContent.innerHTML = `<div class="result">
+        <h3>Congratulations!</h3>
+        <p>
+          You have reached <span>${currentPoints.textContent}</span> points. That shows you
+          are a true and loyal metalhead. Keep going on listening to good music!
+          Rock on mate! Enjoy the
+          <a
+            href="https://www.youtube.com/watch?v=FEHaEuiN3CA&ab_channel=PederRoos"
+            target_blank
+            >Def Leppard movie</a
+          >
+          as your reward!
+        </p>
+
+        <button id="start-again" onclick="refreshPage()">Start again</button>
+      </div>`;
     }
   }
 }
