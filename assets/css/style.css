@@ -2,13 +2,19 @@
 :root {
   --title-font: "Pangolin", cursive;
   --text-font: "Poppins", sans-serif;
+  --yellow-color: rgb(235, 226, 22);
+  --blue-color: rgb(73, 151, 209);
+  --green-color: rgba(81, 160, 62, 0.8);
+  --red-color: rgba(204, 19, 18, 0.8);
 }
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
+body {
+  background: url(/assets/images/hyteria.jpg) no-repeat center center / cover;
+}
 .container {
   width: 95%;
   max-width: 600px;
@@ -16,6 +22,7 @@
   border: 1px solid black;
   text-align: center;
   font-family: var(--text-font);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 /*intro*/
@@ -75,7 +82,7 @@ a:hover {
   font-size: 25px;
   margin: 40px 10px;
   border-radius: 30%;
-  background-color: yellow;
+  background-color: var(--yellow-color);
   font-family: var(--title-font);
 }
 #outro div {
@@ -108,10 +115,10 @@ a:hover {
 /*works with functions*/
 
 .right-background {
-  background-color: green;
+  background-color: var(--green-color);
 }
 .wrong-background {
-  background-color: red;
+  background-color: var(--red-color);
 }
 
 /*media query for tablet or bigger */

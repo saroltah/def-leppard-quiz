@@ -163,14 +163,14 @@ function addPoint() {
 for (let optionButton of optionButtons) {
   optionButton.addEventListener("click", function () {
     let textValue = optionButton.textContent;
-    if (nextQuestion.style.backgroundColor !== "blue") {
+    if (nextQuestion.style.backgroundColor !== "var(--yellow-color)") {
       if (textValue === allQuestions[i].right) {
         optionButton.classList.add("right-background");
-        nextQuestion.style.backgroundColor = "blue";
+        nextQuestion.style.backgroundColor = "var(--yellow-color)";
         addPoint();
       } else {
         optionButton.classList.add("wrong-background");
-        nextQuestion.style.backgroundColor = "blue";
+        nextQuestion.style.backgroundColor = "var(--yellow-color)";
       }
     }
   });
