@@ -204,13 +204,13 @@ function showResult() {
         <p>
           You have reached <span>${currentPoints.textContent}</span> point(s). You might not
           be the biggest fan of this band, but it is never too late to become
-          one. Check out the
+          one. Check out the 
           <a
             href="https://www.youtube.com/watch?v=FEHaEuiN3CA&ab_channel=PederRoos"
             target="_blank"
             aria-label="click to open a Youtube link to watch the Def Leppard:Hysteria movie, it opens in new tab"
             >Def Leppard movie</a
-          >
+          > 
           and catch up!
         </p>
 
@@ -222,14 +222,14 @@ function showResult() {
         <p>
           You have reached <span>${currentPoints.textContent}</span> points. I believe you
           love Def Leppard, but you might have missed out on some events in the
-          band’s life. Watch the
+          band’s life. Watch the 
           <a
             href="https://www.youtube.com/watch?v=FEHaEuiN3CA&ab_channel=PederRoos"
             target="_blank"
             aria-label="click to open a Youtube link to watch the Def Leppard:Hysteria movie, it opens in new tab"
             >Def Leppard movie</a
           >
-          and catch up!
+           and catch up!
         </p>
 
         <button id="start-again" onclick="refreshPage()">Start again</button>
@@ -247,7 +247,7 @@ function showResult() {
             aria-label="click to open a Youtube link to watch the Def Leppard:Hysteria movie, it opens in new tab"
             >Def Leppard movie</a
           >
-          as your reward!
+         as your reward!
         </p>
 
         <button id="start-again" onclick="refreshPage()">Start again</button>
