@@ -17,7 +17,7 @@ body {
   background: url("../images/hyteria.jpg") no-repeat center center / cover;
   height: 100%;
 }
-.container {
+.doc-container {
   width: 95%;
   max-width: 600px;
   margin: 40px auto;
@@ -129,11 +129,13 @@ a:hover {
 .wrong-background {
   background-color: var(--red-color);
 }
-
+.transparent-background {
+  background-color: transparent;
+}
 /*media query for tablet or bigger */
 
 @media screen and (min-width: 768px) {
-  .container {
+  .doc-container {
     margin: 90px auto;
   }
   h2,

@@ -6,8 +6,8 @@ const option2 = document.getElementById("option2");
 const option3 = document.getElementById("option3");
 const nextQuestion = document.getElementById("next-question");
 const currentPoints = document.getElementById("current-points");
-const optionButtons = document.getElementsByClassName("option-buttons");
-const mainContent = document.getElementById("main-content");
+const answerButtons = document.getElementsByClassName("answer-buttons");
+const quizContainer = document.getElementById("quiz-container");
 let i = -1;
 
 const allQuestions = [
@@ -138,10 +138,10 @@ function changeQuestion() {
 
 // add function to delete background
 
-function deleteBackgroundcolor() {
-  for (let optionButton of optionButtons) {
-    optionButton.classList.remove("right-background");
-    optionButton.classList.remove("wrong-background");
+function deleteBackgroundColor() {
+  for (let answerButton of answerButtons) {
+    answerButton.classList.remove("right-background");
+    answerButton.classList.remove("wrong-background");
     nextQuestion.style.backgroundColor = "transparent";
   }
 }
@@ -149,10 +149,10 @@ function deleteBackgroundcolor() {
 // add one point score if right button is clicked
 
 function addPoint() {
-  for (let optionButton of optionButtons) {
+  for (let answerButton of answerButtons) {
     let oldPoints = parseInt(currentPoints.innerText);
 
-    if (optionButton.classList.contains("right-background")) {
+    if (answerButton.classList.contains("right-background")) {
       currentPoints.innerHTML = oldPoints + 1;
     }
   }
@@ -160,16 +160,16 @@ function addPoint() {
 
 // if right button clicked, turn green, if wrong turn red.
 
-for (let optionButton of optionButtons) {
-  optionButton.addEventListener("click", function () {
-    let textValue = optionButton.textContent;
+for (let answerButton of answerButtons) {
+  answerButton.addEventListener("click", function () {
+    let textValue = answerButton.textContent;
     if (nextQuestion.style.backgroundColor !== "var(--yellow-color)") {
       if (textValue === allQuestions[i].right) {
-        optionButton.classList.add("right-background");
+        answerButton.classList.add("right-background");
         nextQuestion.style.backgroundColor = "var(--yellow-color)";
         addPoint();
       } else {
-        optionButton.classList.add("wrong-background");
+        answerButton.classList.add("wrong-background");
         nextQuestion.style.backgroundColor = "var(--yellow-color)";
       }
     }
@@ -182,7 +182,7 @@ function showNext() {
   nextQuestion.innerHTML = "Next";
   i += 1;
   changeQuestion();
-  deleteBackgroundcolor();
+  deleteBackgroundColor();
   showResult();
 }
 
@@ -199,7 +199,7 @@ function showResult() {
 
   if (lastQuestion.question === question.innerHTML) {
     if (parseInt(currentPoints.textContent) < 7) {
-      mainContent.innerHTML = `<div class="result">
+      quizContainer.innerHTML = `<div class="result">
         <h3>Congratulations!</h3>
         <p>
           You have reached <span>${currentPoints.textContent}</span> point(s). You might not
@@ -217,7 +217,7 @@ function showResult() {
         <button id="start-again" onclick="refreshPage()">Start again</button>
       </div>`;
     } else if (parseInt(currentPoints.textContent) < 11) {
-      mainContent.innerHTML = `<div class="result">
+      quizContainer.innerHTML = `<div class="result">
         <h3>Congratulations!</h3>
         <p>
           You have reached <span>${currentPoints.textContent}</span> points. I believe you
@@ -235,7 +235,7 @@ function showResult() {
         <button id="start-again" onclick="refreshPage()">Start again</button>
       </div>`;
     } else if (parseInt(currentPoints.textContent) >= 11) {
-      mainContent.innerHTML = `<div class="result">
+      quizContainer.innerHTML = `<div class="result">
         <h3>Congratulations!</h3>
         <p>
           You have reached <span>${currentPoints.textContent}</span> points. That shows you
