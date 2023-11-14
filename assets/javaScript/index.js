@@ -10,6 +10,8 @@ const answerButtons = document.getElementsByClassName("answer-buttons");
 const quizContainer = document.getElementById("quiz-container");
 let i = -1;
 
+// questions and answers
+
 const allQuestions = [
   {
     question: "What year was Def Leppard formed?",
@@ -127,6 +129,28 @@ const allQuestions = [
   },
 ];
 
+// result messages
+
+const movieLink = `<a
+            href="https://www.youtube.com/watch?v=FEHaEuiN3CA&ab_channel=PederRoos"
+            target="_blank
+            aria-label="click to open a Youtube link to watch the Def Leppard:Hysteria movie, it opens in new tab"
+            >Def Leppard movie</a>`;
+
+const resultMessages = {
+  pointResultMessage: `<h3>Congratulations!</h3> <p>You have reached <span>${currentPoints.textContent}</span> points. `,
+  lowScoreMessage:
+    "You might not be the biggest fan of this band, but it is never too late to become one. ",
+  middleScoreMessage:
+    "I believe you love Def Leppard, but you might have missed out on some events in the band’s life. ",
+  highScoreMessage:
+    "That shows you are a true and loyal metalhead. Keep going on listening to good music! Rock on mate! ",
+  videoLinkLow: `Watch the ${movieLink} and catch up!</p>`,
+  videoLinkHigh: `Watch the ${movieLink} as your reward!</p>`,
+  startAgainButton:
+    '<button id="start-again" onclick="refreshPage()">Start again</button>.',
+};
+
 // change the question's inner HTML and change the option's inner HTML
 
 function changeQuestion() {
@@ -193,61 +217,7 @@ function showResult() {
   }
 
   if (lastQuestion.question === question.innerHTML) {
-    if (parseInt(currentPoints.textContent) < 7) {
-      quizContainer.innerHTML = `<div class="result">
-        <h3>Congratulations!</h3>
-        <p>
-          You have reached <span>${currentPoints.textContent}</span> point(s). You might not
-          be the biggest fan of this band, but it is never too late to become
-          one. Check out the 
-          <a
-            href="https://www.youtube.com/watch?v=FEHaEuiN3CA&ab_channel=PederRoos"
-            target="_blank"
-            aria-label="click to open a Youtube link to watch the Def Leppard:Hysteria movie, it opens in new tab"
-            >Def Leppard movie</a
-          > 
-          and catch up!
-        </p>
-
-        <button id="start-again" onclick="refreshPage()">Start again</button>
-      </div>`;
-    } else if (parseInt(currentPoints.textContent) < 11) {
-      quizContainer.innerHTML = `<div class="result">
-        <h3>Congratulations!</h3>
-        <p>
-          You have reached <span>${currentPoints.textContent}</span> points. I believe you
-          love Def Leppard, but you might have missed out on some events in the
-          band’s life. Watch the 
-          <a
-            href="https://www.youtube.com/watch?v=FEHaEuiN3CA&ab_channel=PederRoos"
-            target="_blank"
-            aria-label="click to open a Youtube link to watch the Def Leppard:Hysteria movie, it opens in new tab"
-            >Def Leppard movie</a
-          >
-           and catch up!
-        </p>
-
-        <button id="start-again" onclick="refreshPage()">Start again</button>
-      </div>`;
-    } else if (parseInt(currentPoints.textContent) >= 11) {
-      quizContainer.innerHTML = `<div class="result">
-        <h3>Congratulations!</h3>
-        <p>
-          You have reached <span>${currentPoints.textContent}</span> points. That shows you
-          are a true and loyal metalhead. Keep going on listening to good music!
-          Rock on mate! Enjoy the
-          <a
-            href="https://www.youtube.com/watch?v=FEHaEuiN3CA&ab_channel=PederRoos"
-            target="_blank
-            aria-label="click to open a Youtube link to watch the Def Leppard:Hysteria movie, it opens in new tab"
-            >Def Leppard movie</a
-          >
-         as your reward!
-        </p>
-
-        <button id="start-again" onclick="refreshPage()">Start again</button>
-      </div>`;
-    }
+    showResultMessage();
   }
 }
 
@@ -255,4 +225,31 @@ function showResult() {
 
 function refreshPage() {
   document.location.reload();
+}
+
+// different result messages according to reached points
+
+let score = parseInt(currentPoints.textContent);
+
+function showResultMessage() {
+  quizContainer.classList.add("result");
+  if (score < 7) {
+    quizContainer.innerHTML =
+      resultMessages.pointResultMessage +
+      resultMessages.lowScoreMessage +
+      resultMessages.videoLinkLow +
+      resultMessages.startAgainButton;
+  } else if (score < 11) {
+    quizContainer.innerHTML =
+      resultMessages.pointResultMessage +
+      resultMessages.middleScoreMessage +
+      resultMessages.videoLinkLow +
+      resultMessages.startAgainButton;
+  } else if (score >= 11) {
+    quizContainer.innerHTML =
+      resultMessages.pointResultMessage +
+      resultMessages.highScoreMessage +
+      resultMessages.videoLinkHigh;
+    resultMessages.startAgainButton;
+  }
 }
