@@ -149,13 +149,8 @@ function deleteBackgroundColor() {
 // add one point score if right button is clicked
 
 function addPoint() {
-  for (let answerButton of answerButtons) {
-    let oldPoints = parseInt(currentPoints.innerText);
-
-    if (answerButton.classList.contains("right-background")) {
-      currentPoints.innerHTML = oldPoints + 1;
-    }
-  }
+  let oldPoints = parseInt(currentPoints.innerText);
+  currentPoints.innerHTML = oldPoints + 1;
 }
 
 // if right button clicked, turn green, if wrong turn red.
