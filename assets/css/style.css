@@ -102,11 +102,6 @@ a:hover {
 
 /*result page*/
 
-.result h3 {
-  font-size: 30px;
-  margin-top: 30px;
-  font-family: var(--title-font);
-}
 .result a {
   text-decoration: none;
   font-size: 110%;
@@ -117,7 +112,7 @@ a:hover {
   line-height: 30px;
   text-align: justify;
 }
-.result span {
+h2 span {
   font-weight: bold;
 }
 
@@ -131,6 +126,9 @@ a:hover {
 }
 .transparent-background {
   background-color: transparent;
+}
+.yellow-background {
+  background-color: var(--yellow-color);
 }
 /*media query for tablet or bigger */
 

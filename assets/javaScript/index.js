@@ -8,6 +8,7 @@ const nextQuestion = document.getElementById("next-question");
 const currentPoints = document.getElementById("current-points");
 const answerButtons = document.getElementsByClassName("answer-buttons");
 const quizContainer = document.getElementById("quiz-container");
+const resultContainer = document.getElementById("true-fan-text");
 let i = -1;
 
 // questions and answers
@@ -129,28 +130,6 @@ const allQuestions = [
   },
 ];
 
-// result messages
-
-const movieLink = `<a
-            href="https://www.youtube.com/watch?v=FEHaEuiN3CA&ab_channel=PederRoos"
-            target="_blank
-            aria-label="click to open a Youtube link to watch the Def Leppard:Hysteria movie, it opens in new tab"
-            >Def Leppard movie</a>`;
-
-const resultMessages = {
-  pointResultMessage: `<h3>Congratulations!</h3> <p>You have reached <span>${currentPoints.textContent}</span> points. `,
-  lowScoreMessage:
-    "You might not be the biggest fan of this band, but it is never too late to become one. ",
-  middleScoreMessage:
-    "I believe you love Def Leppard, but you might have missed out on some events in the band’s life. ",
-  highScoreMessage:
-    "That shows you are a true and loyal metalhead. Keep going on listening to good music! Rock on mate! ",
-  videoLinkLow: `Watch the ${movieLink} and catch up!</p>`,
-  videoLinkHigh: `Watch the ${movieLink} as your reward!</p>`,
-  startAgainButton:
-    '<button id="start-again" onclick="refreshPage()">Start again</button>.',
-};
-
 // change the question's inner HTML and change the option's inner HTML
 
 function changeQuestion() {
@@ -227,29 +206,49 @@ function refreshPage() {
   document.location.reload();
 }
 
-// different result messages according to reached points
+// result messages variables
 
-let score = parseInt(currentPoints.textContent);
+const movieLink = `<a
+            href="https://www.youtube.com/watch?v=FEHaEuiN3CA&ab_channel=PederRoos"
+            target="_blank
+            aria-label="click to open a Youtube link to watch the Def Leppard:Hysteria movie, it opens in new tab"
+            >Def Leppard movie</a>`;
+
+const resultMessages = {
+  lowScoreMessage:
+    "<p> You might not be the biggest fan of this band, but it is never too late to become one. ",
+  middleScoreMessage:
+    "<p>I believe you love Def Leppard, but you might have missed out on some events in the band’s life. ",
+  highScoreMessage:
+    "<p>That shows you are a true and loyal metalhead. Keep going on listening to good music! Rock on mate! ",
+  videoLinkLow: `Watch the ${movieLink} and catch up!</p>`,
+  videoLinkHigh: `Watch the ${movieLink} as your reward!</p>`,
+};
+
+// create start Again button
+
+const startAgainButton = document.createElement("button");
+startAgainButton.id = "start-again";
+startAgainButton.textContent = "Start Again";
+startAgainButton.addEventListener("click", refreshPage);
+
+// different result messages according to reached points;
 
 function showResultMessage() {
   quizContainer.classList.add("result");
-  if (score < 7) {
+
+  resultContainer.innerHTML = `Congratulations! You have reached 
+  <span>${currentPoints.textContent}</span> points.`;
+
+  if (parseInt(currentPoints.textContent) < 7) {
     quizContainer.innerHTML =
-      resultMessages.pointResultMessage +
-      resultMessages.lowScoreMessage +
-      resultMessages.videoLinkLow +
-      resultMessages.startAgainButton;
-  } else if (score < 11) {
+      resultMessages.lowScoreMessage + resultMessages.videoLinkLow;
+  } else if (parseInt(currentPoints.textContent) < 11) {
     quizContainer.innerHTML =
-      resultMessages.pointResultMessage +
-      resultMessages.middleScoreMessage +
-      resultMessages.videoLinkLow +
-      resultMessages.startAgainButton;
-  } else if (score >= 11) {
+      resultMessages.middleScoreMessage + resultMessages.videoLinkLow;
+  } else if (parseInt(currentPoints.textContent) >= 11) {
     quizContainer.innerHTML =
-      resultMessages.pointResultMessage +
-      resultMessages.highScoreMessage +
-      resultMessages.videoLinkHigh;
-    resultMessages.startAgainButton;
+      resultMessages.highScoreMessage + resultMessages.videoLinkHigh;
   }
+  quizContainer.appendChild(startAgainButton);
 }
