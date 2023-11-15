@@ -13,8 +13,8 @@
   box-sizing: border-box;
 }
 body {
-  background-color: black;
-  background: url("../images/hyteria.jpg") no-repeat center center / cover;
+  background: black url("../images/hysteria.jpg") no-repeat center center /
+    cover;
   height: 100%;
 }
 .doc-container {

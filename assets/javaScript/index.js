@@ -200,10 +200,17 @@ function showResult() {
   }
 }
 
-// start again button refreshes the page
+// refresh page function to start again button
 
 function refreshPage() {
   document.location.reload();
+
+  // create start Again button
+
+  const startAgainButton = document.createElement("button");
+  startAgainButton.id = "start-again";
+  startAgainButton.textContent = "Start Again";
+  startAgainButton.addEventListener("click", refreshPage);
 }
 
 // result messages variables
@@ -225,14 +232,7 @@ const resultMessages = {
   videoLinkHigh: `Watch the ${movieLink} as your reward!</p>`,
 };
 
-// create start Again button
-
-const startAgainButton = document.createElement("button");
-startAgainButton.id = "start-again";
-startAgainButton.textContent = "Start Again";
-startAgainButton.addEventListener("click", refreshPage);
-
-// different result messages according to reached points;
+// different result messages according to reached points
 
 function showResultMessage() {
   quizContainer.classList.add("result");
