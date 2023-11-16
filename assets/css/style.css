@@ -13,7 +13,7 @@
   box-sizing: border-box;
 }
 body {
-  background: black url("../images/hysteria.jpg") no-repeat center center /
+  background: black url("../images/hysteria.webp") no-repeat center center /
     cover;
   height: 100%;
 }
@@ -125,12 +125,7 @@ h2 span {
 .wrong-background {
   background-color: var(--red-color);
 }
-.transparent-background {
-  background-color: transparent;
-}
-.yellow-background {
-  background-color: var(--yellow-color);
-}
+
 /*media query for tablet or bigger */
 
 @media screen and (min-width: 768px) {
