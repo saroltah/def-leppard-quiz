@@ -8,7 +8,7 @@ const nextQuestion = document.getElementById("next-question");
 const currentPoints = document.getElementById("current-points");
 const answerButtons = document.getElementsByClassName("answer-buttons");
 const quizContainer = document.getElementById("quiz-container");
-const resultContainer = document.getElementById("true-fan-text");
+const resultContainer = document.getElementById("result-container");
 let i = -1;
 
 // questions and answers
@@ -101,7 +101,7 @@ const allQuestions = [
     right: "7.200.000",
   },
   {
-    question: "How many video clips do they published?",
+    question: "How many video clips have they published?",
     first: "46",
     second: "54",
     third: "60",
@@ -156,7 +156,7 @@ function addPoint() {
   currentPoints.innerHTML = oldPoints + 1;
 }
 
-// if right button clicked, turn green, if wrong turn red.
+// if right button clicked, turn green, if wrong, turn red.
 
 for (let answerButton of answerButtons) {
   answerButton.addEventListener("click", function () {
@@ -174,43 +174,10 @@ for (let answerButton of answerButtons) {
   });
 }
 
-// next question button loads the next question
-
-function showNext() {
-  nextQuestion.innerHTML = "Next";
-  i += 1;
-  changeQuestion();
-  deleteBackgroundColor();
-  showResult();
-}
-
-// change next button innerhtml before the last question
-// show the result after last question
-
-function showResult() {
-  let secondLastQuestion = allQuestions[allQuestions.length - 2];
-  let lastQuestion = allQuestions[allQuestions.length - 1];
-
-  if (secondLastQuestion.question === question.innerHTML) {
-    nextQuestion.innerHTML = "Show result";
-  }
-
-  if (lastQuestion.question === question.innerHTML) {
-    showResultMessage();
-  }
-}
-
 // refresh page function to start again button
 
 function refreshPage() {
   document.location.reload();
-
-  // create start Again button
-
-  const startAgainButton = document.createElement("button");
-  startAgainButton.id = "start-again";
-  startAgainButton.textContent = "Start Again";
-  startAgainButton.addEventListener("click", refreshPage);
 }
 
 // result messages variables
@@ -232,13 +199,20 @@ const resultMessages = {
   videoLinkHigh: `Watch the ${movieLink} as your reward!</p>`,
 };
 
+// create start Again button
+
+const startAgainButton = document.createElement("button");
+startAgainButton.id = "start-again";
+startAgainButton.textContent = "Start Again";
+startAgainButton.addEventListener("click", refreshPage);
+
 // different result messages according to reached points
 
 function showResultMessage() {
   quizContainer.classList.add("result");
 
   resultContainer.innerHTML = `Congratulations! You have reached 
-  <span>${currentPoints.textContent}</span> points.`;
+  <span>${currentPoints.textContent}</span> point(s).`;
 
   if (parseInt(currentPoints.textContent) < 7) {
     quizContainer.innerHTML =
@@ -251,4 +225,29 @@ function showResultMessage() {
       resultMessages.highScoreMessage + resultMessages.videoLinkHigh;
   }
   quizContainer.appendChild(startAgainButton);
+}
+
+// change next button innerHtml before the last question
+// show the result after last question
+
+function showResult() {
+  let secondLastQuestion = allQuestions[allQuestions.length - 2];
+  let lastQuestion = allQuestions[allQuestions.length - 1];
+
+  if (secondLastQuestion.question === question.innerHTML) {
+    nextQuestion.innerHTML = "Show result";
+  }
+
+  if (lastQuestion.question === question.innerHTML) {
+    showResultMessage();
+  }
+}
+
+// next question button loads the next question
+function showNext() {
+  nextQuestion.innerHTML = "Next";
+  i += 1;
+  changeQuestion();
+  deleteBackgroundColor();
+  showResult();
 }

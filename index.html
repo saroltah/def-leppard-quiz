@@ -23,33 +23,31 @@
       <section id="intro">
         <h1>
           The Ultimate
-          <div>Def Leppard</div>
+          <span>Def Leppard</span>
           Quiz
         </h1>
-        <h2 id="true-fan-text">
+        <h2 id="result-container">
           Test your knowledge and find out if you are a true fan
         </h2>
       </section>
-      <section id="quiz-container">
-        <section id="quiz">
-          <div id="question-area">
-            <div id="question">Are you ready to start the quiz?</div>
+      <div id="quiz-container">
+        <div id="question-area">
+          <div id="question">Are you ready to start the quiz?</div>
+        </div>
+        <div id="answer-content">
+          <div id="answers">
+            <button id="option1" class="answer-buttons">
+              Let's get rocked!
+            </button>
+            <button id="option2" class="answer-buttons">Hell yeah!</button>
+            <button id="option3" class="answer-buttons">Bring it on!</button>
           </div>
-          <div id="answer-content">
-            <div id="answers">
-              <button id="option1" class="answer-buttons">
-                Let's get rocked!
-              </button>
-              <button id="option2" class="answer-buttons">Hell yeah!</button>
-              <button id="option3" class="answer-buttons">Bring it on!</button>
-            </div>
-          </div>
-        </section>
-        <section id="outro">
+        </div>
+        <div id="outro">
           <button id="next-question" onclick="showNext()">Start</button>
           <div id="points">Points: <span id="current-points">0</span>/15</div>
-        </section>
-      </section>
+        </div>
+      </div>
     </div>
     <script src="assets/javaScript/index.js"></script>
   </body>
