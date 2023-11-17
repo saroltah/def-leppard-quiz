@@ -235,7 +235,7 @@ function showResult() {
   let lastQuestion = allQuestions[allQuestions.length - 1];
 
   if (secondLastQuestion.question === question.innerHTML) {
-    nextQuestion.innerHTML = "Show result";
+    nextQuestion.innerHTML = "Show Result";
   }
 
   if (lastQuestion.question === question.innerHTML) {
