@@ -69,11 +69,23 @@ _Goal of this website:_ to entertain people, to give some new information, and t
 
 In this project I was focusing on Java script functionality, so used a reversed order of coding.
 
-#### 1. I planned the app on paper, so I see the HTML elements and visualize the functions. - It was faster and easier than using a wireframe app.
+---
 
-#### 2. How to use the Code Institute template: Click on: get the template, use this template. Create a repository, open it with GitHub Desktop, clone the repository, and open it in VS code.
+### 1.
 
-#### 3. I created the initial folders, files, and links, then published the page on GitHub.
+I planned the app on paper, so I see the HTML elements and visualize the functions. - It was faster and easier than using a wireframe app.
+
+---
+
+### 2.
+
+How to use the Code Institute template: Click on: get the template, use this template. Create a repository, open it with GitHub Desktop, clone the repository, and open it in VS code.
+
+---
+
+### 3.
+
+I created the initial folders, files, and links, then published the page on GitHub.
 
 **Deployment**:
 
@@ -112,7 +124,11 @@ In this project I was focusing on Java script functionality, so used a reversed 
 
     V. Now the clone is ready to be used.
 
-#### 4. Added basic HTML with one default question, sections, and text.
+---
+
+### 4.
+
+Added basic HTML with one default question, sections, and text.
 
 | Bug / Issue                                                     | Solution                                                      |
 | --------------------------------------------------------------- | ------------------------------------------------------------- |
@@ -126,7 +142,11 @@ _Try out CSS and JS:_
 
 ![tying out css and js](/assets/images/readme-images/trying%20out%20css%20and%20js.png)
 
-#### 5. I wrote Java Script first with 2 questions and made sure everything was working before adding more.
+---
+
+### 5.
+
+I wrote Java Script first with 2 questions and made sure everything was working before adding more.
 
 _Figure out what functions I need:_
 
@@ -214,7 +234,11 @@ _Different result, high score:_
 
 ![high score result](/assets/images/readme-images/different%20result%202.png)
 
-#### 6. I added CSS
+---
+
+### 6.
+
+I added CSS
 
 - Styled it first for the mobile device, after I edited it for bigger screens.
 - Added font-size and spacing first. I added a max-width to the main-container, because the content is not long, and it needs to keep a nice shape.
@@ -267,7 +291,11 @@ _Corrected body height:_
 
 ![corrected body height ](</assets/images/readme-images/body%20height%20error%20fixed%20(and%20cut%20black%20part%20from%20image).png>)
 
-#### 7. Last touches
+---
+
+### 7.
+
+Last touches
 
 - Deleted containers and CSS properties that were not needed.
 - Checked the validators, lighthouse, etc, and ran one more test.
