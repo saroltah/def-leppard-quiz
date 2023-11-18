@@ -6,6 +6,8 @@ A fun game about one of my favorite bands.
 
 _Goal of this website:_ to entertain people, to give some new information, and to awaken interest.
 
+---
+
 ## Original Idea:
 
 - Questions are shown one by one because that looks better on mobile devices.
@@ -13,6 +15,8 @@ _Goal of this website:_ to entertain people, to give some new information, and t
 - No submit button is needed. The answers should change to different colors (right/wrong)
 - Next button: to show the next question.
 - Current score: that counts the clicked correct answers.
+
+---
 
 ## Output and solutions from the idea:
 
@@ -64,6 +68,8 @@ _Goal of this website:_ to entertain people, to give some new information, and t
 - I made sure that I created a function before I declared it - so the order of them is not the order of writing.
 - I changed _jpg_ to _webp_ for optimization.
 - I didn't make semantically sections because there were no headings in each. Instead, I used _divs_.
+
+---
 
 ## Workflow
 
@@ -301,6 +307,8 @@ Last touches
 - Checked the validators, lighthouse, etc, and ran one more test.
 - Optimized add point function - made it shorter.
 
+---
+
 ## Technology
 
 _Programs:_
@@ -326,6 +334,8 @@ _Validating:_
 - [Am I responsive?](https://ui.dev/amiresponsive)
 - [W3C CSS validator](https://jigsaw.w3.org/css-validator/)
 - [W3C HTML validator](https://validator.w3.org/)
+
+---
 
 ## Testing
 
@@ -395,6 +405,8 @@ _Lighthouse mobile:_
 _Am I responsive?:_
 
 ![am i responsive ](/assets/images/readme-images/am%20i%20responsive.png)
+
+---
 
 ## Credits
 
