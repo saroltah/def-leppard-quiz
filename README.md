@@ -28,7 +28,7 @@ _Goal of this website:_ to entertain people, to give some new information, and t
 
 ### Show result:
 
-- After the last question instead of _Next: it shows: \_Show result_, so the user knows, that was the last question. The result shows the obtained points (which the user can see during the whole game), also shows a personalized message - depending on if the points fall into low- middle- or high-score category, and a YouTube link to watch the Def Leppard movie - in a new tab.
+- After the last question instead of _Next_: it shows: _Show result_, so the user knows, that was the last question. The result shows the obtained points (which the user can see during the whole game), also shows a personalized message - depending on if the points fall into low- middle- or high-score category, and a YouTube link to watch the Def Leppard movie - in a new tab.
 - On the _result_ page, only the title remains from the default text, which makes sense semantically, and shows the test is over.
 
 ### Start again:
@@ -46,8 +46,8 @@ _Goal of this website:_ to entertain people, to give some new information, and t
 - I used a different section with a slightly transparent white background, to be able to read the text.
 - I chose the app's colors from the background album cover, so it matches together. I make them slightly transparent with _rgba_, so they are not so strong, and more readable.
 - I chose two different font-families, so the sections and functions are more separate. Also, the main font is more decorative while the questions and answers are much more readable. I also varied the font-weight and font-style qualities to make the little sections more separable and easier to follow.
-- _Points_ section under the \_Next_button has a fun but light border, to be seen but does not take the attention away from the questions.
-- The result page shows the obtained point \_bold* because that is the main result that affects the text evaluation. The \_Def Leppard movie link* is blue, and I also kept little space in front of it and after it, so it indicates that is a different part of the text, that the user can click on.
+- _Points_ section under the _Next_ button has a fun but light border, to be seen but does not take the attention away from the questions.
+- The result page shows the obtained point _bold_ because that is the main result that affects the text evaluation. The _Def Leppard movie link_ is blue, and I also kept little space in front of it and after it, so it indicates that is a different part of the text, that the user can click on.
 
 ### Structure
 
@@ -91,7 +91,7 @@ In this project I was focusing on Java script functionality, so used a reversed 
 
     VII. Select "branch: main", folder: "/(root)", and click save
 
-    VIII. Then go back to your main page (on the top select saroltah/def-Leppard-quiz
+    VIII. Then go back to your main page, on the top, select saroltah/def-Leppard-quiz
 
     IX. On the right side menu click on "deployments, GitHub-pages"
 
@@ -118,7 +118,19 @@ In this project I was focusing on Java script functionality, so used a reversed 
 | --------------------------------------------------------------- | ------------------------------------------------------------- |
 | My basic (empty) HTML didn't load, and couldn’t find the reason | I set up the document again, and then it functioned properly. |
 
+_Add basic HTML:_
+
+![add basic html](/assets/images/readme-images/add%20basic%20html.png)
+
+_Try out CSS and JS:_
+
+![tying out css and js](/assets/images/readme-images/trying%20out%20css%20and%20js.png)
+
 #### 5. I wrote Java Script first with 2 questions and made sure everything was working before adding more.
+
+_Figure out what functions I need:_
+
+![figure out what functions I need](/assets/images/readme-images/figure%20out%20what%20functions%20i%20need.png)
 
 ### Logic:
 
@@ -138,9 +150,21 @@ In this project I was focusing on Java script functionality, so used a reversed 
 | Issue/Bug                                                                                                                                     | Solution                                                                                                                                                                                                                                                                                                                                                            |
 | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | I used the index number as a value instead of a string for the “right” value in the object. So the changeQuestion() function was not working. | _Console.log_ my arrays, to see if they are correct - yes. Noticed that W h i are the first letters of the question. I wrote accidentally All Questions instead of All Answers so it took the letters out. Then Answers got undefined because I realized I work with objects inside an array. Objects have no index numbers. So I corrected the numbers to strings. |
-| It only shows the last question and only that one, it doesn't change for the button. - it overwrites always the previous one                  | I realized I didn’t need a loop, instead, I made _i_ a variable and made _showNext()_ function that always adds 1 to the _i_when the \_Next_ button is clicked. Add the _i_ -1 value as default, so it starts at 0 - first question.                                                                                                                                |
+| It only shows the last question and only that one, it doesn't change for the button. - it overwrites always the previous one                  | I realized I didn’t need a loop, instead, I made _i_ a variable and made _showNext()_ function that always adds 1 to the _i_ when the Next button is clicked. Add the _i_ -1 value as default, so it starts at 0 - first question.                                                                                                                                  |
 | It turns green for the right answer, but when I change the question that option stays green.                                                  | I set the _deleteBackgroundColor()_ function                                                                                                                                                                                                                                                                                                                        |
 | I can click on more options.                                                                                                                  | I set up conditional, if something was clicked on, the _Next_ button gets a property. If that property is off, only in that case can the function run. I also remove that property when we change the question.                                                                                                                                                     |
+
+_Try out eventListener with alert:_
+
+![Try out eventListener with alert](/assets/images/readme-images/try%20out%20event%20listener%20with%20alert.png)
+
+_Color change for right answer:_
+
+![color change for right answer](/assets/images/readme-images/right%20answer.png)
+
+_Color change for wrong answer:_
+
+![color change for wrong answer](/assets/images/readme-images/wrong%20answer.png)
 
 **Add a point for the right answer**
 
@@ -178,15 +202,46 @@ In this project I was focusing on Java script functionality, so used a reversed 
 | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | The showResult function was not dynamic and was too long | I created an object with the data, added them to the showResultMessages()function, and created the _Start again_ button separately. |
 
-#### 6. Added CSS
+_Different result, low score:_
+
+![low score result](/assets/images/readme-images/different%20result%201.png)
+
+_Different result, middle score:_
+
+![middle score result](/assets/images/readme-images/different%20result%203.png)
+
+_Different result, high score:_
+
+![high score result](/assets/images/readme-images/different%20result%202.png)
+
+#### 6. I added CSS
 
 - Styled it first for the mobile device, after I edited it for bigger screens.
 - Added font-size and spacing first. I added a max-width to the main-container, because the content is not long, and it needs to keep a nice shape.
+
+_Add spacing and font-size:_
+
+![add spacing and font-size](/assets/images/readme-images/add%20spacing%20and%20font-size.png)
+
 - I added flexbox to the buttons, so I could style them together nicely lined up under each other.
 - I put the _Result text_ under the main page, so I could style it. After I copied it back to Java Script.
+
+_Edit result text on the main page:_
+
+![edit result text on the main page](/assets/images/readme-images/editing%20result%20text%20in%20main%20page.png)
+
 - Added background image to full screen, and transparent color for the main container.
 - Added two font-families Pangolin and Poppins, the first one is more decorative, and the second is easy to read.
+
+_Choose font-family:_
+
+![Choose font-family](/assets/images/readme-images/checking%20for%20font%20family.png)
+
 - I chose colors from the background image.
+
+_Choose colors:_
+
+![Choose colors](/assets/images/readme-images/choosing%20colors.png)
 
 yellow: rgb(235,226,22)
 
@@ -203,6 +258,14 @@ red: rgb(204,19,18)
 | Issue/Bug                    | Solution                                          |
 | ---------------------------- | ------------------------------------------------- |
 | The body was not long enough | I changed from height: 100% to min-height: 100vh. |
+
+_Error in body height:_
+
+![error in body height ](/assets/images/readme-images/error%20in%20body%20height.png)
+
+_Corrected body height:_
+
+![corrected body height ](</assets/images/readme-images/body%20height%20error%20fixed%20(and%20cut%20black%20part%20from%20image).png>)
 
 #### 7. Last touches
 
@@ -236,6 +299,47 @@ _Validating:_
 - [W3C CSS validator](https://jigsaw.w3.org/css-validator/)
 - [W3C HTML validator](https://validator.w3.org/)
 
+## Testing
+
+Tried on mobile, tablet, laptop and desktop screen view.
+
+| What to do                                                                                                         | How to do                                                               | Expected outcome                                                                                                                                                                                                                        | Actual Outcome                                                                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| When i first open the page the default question is visible                                                         | Open/refresh the page                                                   | Default question is visible                                                                                                                                                                                                             | Default question is visible                                                                                                                                                                                                             |
+| Default answers are not clickable                                                                                  | Clicg on default answers                                                | Nothing happens                                                                                                                                                                                                                         | Nothing happens                                                                                                                                                                                                                         |
+| Cursor changes on the button                                                                                       | I bring my cursor on the answer buttons or _Next_ button                | The cursor changes to pointer                                                                                                                                                                                                           | The cursor changes to pointer                                                                                                                                                                                                           |
+| The _Start_ button is default yellow                                                                               | I open / refresh page                                                   | The \_Start_button is yellow                                                                                                                                                                                                            | The _Start_ button is yellow                                                                                                                                                                                                            |
+| The _Start_ button starts the quiz                                                                                 | Click on _Start_ button                                                 | The innerHTML changes. The first “real” question, three option answers _Next_ button is visible instead of _Start_ button                                                                                                               | The innerHTML changes. The first “real” question, three option answers _Next_ button is visible instead of _Start_ button                                                                                                               |
+| The correct answer turns green                                                                                     | Click on the correct answer                                             | It changes color, turns green                                                                                                                                                                                                           | It changes color, turns green                                                                                                                                                                                                           |
+| The wrong answer turns red                                                                                         | Click on a wrong answer                                                 | It changes color, turn red                                                                                                                                                                                                              | It changes color, turns red                                                                                                                                                                                                             |
+| It gives a point for correct answer                                                                                | Click on the correct answer                                             | The innerHTML of “points:” changes, and the number is bigger with 1, than before.                                                                                                                                                       | The innerHTML of “points:” changes, and the number is bigger with 1, than before.                                                                                                                                                       |
+| The wrong answer does not give a point                                                                             | Click on a wrong answer                                                 | The innerHTML of “points” remains the same, nothing changes                                                                                                                                                                             | The innerHTML of “points” remains the same, nothing changes                                                                                                                                                                             |
+| I can only choose one answer                                                                                       | Click on more answers                                                   | The color changes only for the the button first clicked, the rest clicks have no effect                                                                                                                                                 | The color changes only for the the button first clicked, the rest clicks have no effect                                                                                                                                                 |
+| The _Next_ button turns yellow when an answer button is clicked                                                    | Click on an answer button                                               | The _Next_ button turns yellow                                                                                                                                                                                                          | The _Next_ button_turns yellow                                                                                                                                                                                                          |
+| The _Next_ button shows the next question and answers                                                              | click on the Next button                                                | The question’s and answers’ innerHTML change, it shows a new question and three new answers                                                                                                                                             | The question’s and answers’ innerHTML change, it shows a new question and three new answers                                                                                                                                             |
+| You can skip a question                                                                                            | Click on _Next_ button without choosing an answer                       | It shows the next question with answers, and the user loses the chance to answer, there is no going back                                                                                                                                | It shows the next question with answers, and the user loses the chance to answer, there is no going back                                                                                                                                |
+| There are 15 questions with 15\*3 answers                                                                          | Click through the quiz and count                                        | There are 15 questions with 15\*3 answers                                                                                                                                                                                               | There are 15 questions with 15\*3 answers                                                                                                                                                                                               |
+| All the questions has one right and two wrong answers, which get the green(right) or red(wrong)color by clicking   | Click on different answers when clicking through the test multiple time | All the questions has one right and two wrong answers, which get the green(right) or red(wrong)color by clicking                                                                                                                        | All the questions has one right and two wrong answers, which get the green(right) or red(wrong)color by clicking                                                                                                                        |
+| The _Next_ button turns yellow when I click on an answer in all the questions                                      | Click through the quiz and choose an answer for every question          | The Next button turns yellow                                                                                                                                                                                                            | The _Next_ button turns yellow                                                                                                                                                                                                          |
+| The 15th question (“Which book..”) does not have a Next_button, instead it’s innerHTML turns to Show Result button | Click through the quiz until you arrive to the 15th question            | The _Next_ button’s innerHTML turns to _Show Result_                                                                                                                                                                                    | The _Next_ button’s innerHTML turns to _Show Result_                                                                                                                                                                                    |
+| The _Show Result_ button has no background-color, but clicking on an answer turns it yellow                        | Click on an answer at the 15th question                                 | _Show Result_ button turns yellow                                                                                                                                                                                                       | _Show Result_ button turns yellow                                                                                                                                                                                                       |
+| _Show Result_ button leads to the “Result” page                                                                    | Click on _Show result_ button                                           | The inner HTML of the whole page changes. Under the title the user sees a congratulating text with our obtained points. Then a written evaluation paragraph with a _link_ of the Def Leppard movie. Then a yellow _Start Again_ button. | The inner HTML of the whole page changes. Under the title the user sees a congratulating text with our obtained points. Then a written evaluation paragraph with a _link_ of the Def Leppard movie. Then a yellow _Start Again_ button. |
+| The obtained point shows the correct number of points                                                              | Go to the result page by clicking _Show result_ button                  | The obtained point shows the same value as the user have seen under the submit(_Start_ / _Next_ / _Show result_ ) button                                                                                                                | The obtained point shows the same value as the user have seen under the submit(_Start_ / _Next_ / _Show result_ ) button                                                                                                                |
+| There are 3 types of result messages according to the obtained points                                              | Click through the page with different numbers of correct answers        | Lower score - obtained 0-6 points shows “You might not be…” , middle score - obtained 7-10 points shows “I believe you…” , hight score - obtained 11-15 points shows “That shows you are…” message.                                     | Lower score - obtained 0-6 points shows “You might not be…” , middle score - obtained 7-10 points shows “I believe you…” , hight score - obtained 11-15 points shows “That shows you are…” message.                                     |
+| _Start Again_ button starts again the quiz, going back to the default page, deleting all data                      | Click on _Start again_ button                                           | The page refreshes                                                                                                                                                                                                                      | The page refreshes                                                                                                                                                                                                                      |
+| The _Def Leppard movie link_ opens in a new tab                                                                    | Click on the _Def Leppard movie link_                                   | It opens YouTube in a new tab                                                                                                                                                                                                           | It opens YouTube in a new tab                                                                                                                                                                                                           |
+| Responsive on all screen sizes                                                                                     | Open developer tools and check, using _Am I responsive?_ website        | It looks good, and all the functions are working properly in all screen sizes                                                                                                                                                           | It looks good, and all the functions are working properly in all screen sizes                                                                                                                                                           |
+| Correct CSS file                                                                                                   | Copy the CSS code to the W3C CSS validator website                      | There are no errors                                                                                                                                                                                                                     | There are no errors                                                                                                                                                                                                                     |
+| Correct HTML file                                                                                                  | Copy the HTML code to the W3C HTML validator website                    | There are no errors                                                                                                                                                                                                                     | There are no errors                                                                                                                                                                                                                     |
+
+_Correct HTML file:_
+
+![correct HTML file ](/assets/images/readme-images/html%20validator.png)
+
+_Correct CSS file:_
+
+![correct css file ](/assets/images/readme-images/css%20%20validator.png)
+
 **Lighthouse check for desktop devices:**
 
 **Desktop:**
@@ -245,12 +349,24 @@ _Validating:_
 - Best Practices: 100%
 - SEO: 100%
 
+_Lighthouse desktop:_
+
+![lighthouse desktop ](/assets/images/readme-images/lighthouse-desktop.png)
+
 **Mobile:**
 
 - Performance: 98%
 - Accessibility: 100%
 - Best Practices: 100%
 - SEO: 100%
+
+_Lighthouse mobile:_
+
+![lighthouse mobile ](/assets/images/readme-images/light-house%20mobile.png)
+
+_Am I responsive?:_
+
+![am i responsive ](/assets/images/readme-images/am%20i%20responsive.png)
 
 ## Credits
 
@@ -275,6 +391,6 @@ _Code snippets:_
 
 - _location.reload()_ from [Free code camp](https://www.freecodecamp.org/news/javascript-refresh-page-how-to-reload-a-page-in-js/)
 - _element.classList.contains(className)_ from [Stack overflow](https://stackoverflow.com/questions/5898656/check-if-an-element-contains-a-class-in-javascript)
-- _const last = array[array.length - 1] _ from [medium](https://medium.com/codex/how-to-get-the-last-element-in-an-array-in-javascript-c106f2f4b830)
+- _const last = array[array.length - 1]_ from [medium](https://medium.com/codex/how-to-get-the-last-element-in-an-array-in-javascript-c106f2f4b830)
 
 Special thanks to [Code Institute](https://codeinstitute.net/se/full-stack-software-development-diploma/?utm_term=code%20institute&utm_campaign=CI+-+SWE+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=14660337051&hsa_grp=134087657984&hsa_ad=635849372549&hsa_src=g&hsa_tgt=aud-594467886660:kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gad=1&gclid=CjwKCAjw4P6oBhBsEiwAKYVkqzzIpIRAmKF-tC7OHL0D0ijr9ic8Bv2gLino_uOt3SWXrRzbR7NoNhoCisIQAvD_BwE) and my mentor **Ronan McClelland** for reviewing, helping and answering all my questions.

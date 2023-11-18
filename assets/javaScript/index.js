@@ -190,7 +190,7 @@ const movieLink = `<a
 
 const resultMessages = {
   lowScoreMessage:
-    "<p> You might not be the biggest fan of this band, but it is never too late to become one. ",
+    "<p>You might not be the biggest fan of this band, but it is never too late to become one. ",
   middleScoreMessage:
     "<p>I believe you love Def Leppard, but you might have missed out on some events in the band’s life. ",
   highScoreMessage:
