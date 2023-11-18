@@ -135,18 +135,25 @@ I created the initial folders, files, and links, then published the page on GitH
 ### 4.
 
 Added basic HTML with one default question, sections, and text.
+</br>
 
 | Bug / Issue                                                     | Solution                                                      |
 | --------------------------------------------------------------- | ------------------------------------------------------------- |
 | My basic (empty) HTML didn't load, and couldn’t find the reason | I set up the document again, and then it functioned properly. |
 
+</br>
+
 _Add basic HTML:_
 
 ![add basic html](/assets/images/readme-images/add%20basic%20html.png)
 
+</br>
+
 _Try out CSS and JS:_
 
 ![tying out css and js](/assets/images/readme-images/trying%20out%20css%20and%20js.png)
+
+</br>
 
 ---
 
@@ -154,9 +161,13 @@ _Try out CSS and JS:_
 
 I wrote Java Script first with 2 questions and made sure everything was working before adding more.
 
+</br>
+
 _Figure out what functions I need:_
 
 ![figure out what functions I need](/assets/images/readme-images/figure%20out%20what%20functions%20i%20need.png)
+
+</br>
 
 ### Logic:
 
@@ -166,12 +177,16 @@ _Figure out what functions I need:_
 - I loop through the questions/answers and put them into the inner HTML with the _changeQuestion()_ function.
 - First I made allQuestions and allAnswers as separate arrays, but then I put them all into one allQuestions array because it is shorter and simpler.
 
+</br>
+
 **Add options - answers color when they are clicked:**
 
 - I give eventListener to the button that is clicked. I tested first with alert() and with console.log.
 - I use an _if_ statement to check if it is right - the text content is the same as the "right value" in the object.
 - If it is _right_ get a class, if it is wrong get another class. If any of them is clicked, the _Next_ button gets the property(color). If the property is on, the function does not run.
 - When the questions are changing, all the properties and classes are removed to start again.
+
+</br>
 
 | Issue/Bug                                                                                                                                     | Solution                                                                                                                                                                                                                                                                                                                                                            |
 | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -180,39 +195,57 @@ _Figure out what functions I need:_
 | It turns green for the right answer, but when I change the question that option stays green.                                                  | I set the _deleteBackgroundColor()_ function                                                                                                                                                                                                                                                                                                                        |
 | I can click on more options.                                                                                                                  | I set up conditional, if something was clicked on, the _Next_ button gets a property. If that property is off, only in that case can the function run. I also remove that property when we change the question.                                                                                                                                                     |
 
+</br>
+
 _Try out eventListener with alert:_
 
 ![Try out eventListener with alert](/assets/images/readme-images/try%20out%20event%20listener%20with%20alert.png)
+
+</br>
 
 _Color change for right answer:_
 
 ![color change for right answer](/assets/images/readme-images/right%20answer.png)
 
+</br>
+
 _Color change for wrong answer:_
 
 ![color change for wrong answer](/assets/images/readme-images/wrong%20answer.png)
+
+</br>
 
 **Add a point for the right answer**
 
 - Change the innerHTML of the _current points span_ if the option background turns green.
 - Created _old points_ variable which is always the current written out point - and the function adds 1, and then that becomes the new _old point_.
 
+</br>
+
 | Issue/Bug                                                       | Solution                                 |
 | --------------------------------------------------------------- | ---------------------------------------- |
 | _Current point span_ was a string - when it added 1+1 turned 11 | Converted it to number - _use parsInt()_ |
+
+</br>
 
 **Refresh page**
 
 - Add _location.reload()_ in the refreshPage() function to the _Start again_ button.
 
+</br>
+
 **Add the result and change the innerHTML after the last question**
 
 - The showResult() function loads when it arrives at the last question, it changes the innerHTML to the result page with the _Start Again_ button.
+
+</br>
 
 | Issue/Bug                                                   | Solution                                              |
 | ----------------------------------------------------------- | ----------------------------------------------------- |
 | The last question was deleted because the innerHTML changed | I made one last object with no real values(last-last) |
 | It couldn’t refer to current points,${} was not working.    | Added _.textContent_ to the _currentPoints_.          |
+
+</br>
 
 **Make default question as welcome text**
 
@@ -220,25 +253,37 @@ _Color change for wrong answer:_
 
 - Change*Next* button’s innerHTML to _Show result_ for the last question.
 
+</br>
+
 **Add all questions and Result messages**
 
 - Add all the questions, and the Result messages with an if-else statement depending on the number of correct answers.
+
+</br>
 
 | Issue/Bug                                                | Solution                                                                                                                            |
 | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | The showResult function was not dynamic and was too long | I created an object with the data, added them to the showResultMessages()function, and created the _Start again_ button separately. |
 
+</br>
+
 _Different result, low score:_
 
 ![low score result](/assets/images/readme-images/different%20result%201.png)
+
+</br>
 
 _Different result, middle score:_
 
 ![middle score result](/assets/images/readme-images/different%20result%203.png)
 
+</br>
+
 _Different result, high score:_
 
 ![high score result](/assets/images/readme-images/different%20result%202.png)
+
+</br>
 
 ---
 
@@ -249,29 +294,45 @@ I added CSS
 - Styled it first for the mobile device, after I edited it for bigger screens.
 - Added font-size and spacing first. I added a max-width to the main-container, because the content is not long, and it needs to keep a nice shape.
 
+</br>
+
 _Add spacing and font-size:_
 
 ![add spacing and font-size](/assets/images/readme-images/add%20spacing%20and%20font-size.png)
 
+</br>
+
 - I added flexbox to the buttons, so I could style them together nicely lined up under each other.
 - I put the _Result text_ under the main page, so I could style it. After I copied it back to Java Script.
+
+</br>
 
 _Edit result text on the main page:_
 
 ![edit result text on the main page](/assets/images/readme-images/editing%20result%20text%20in%20main%20page.png)
 
+</br>
+
 - Added background image to full screen, and transparent color for the main container.
 - Added two font-families Pangolin and Poppins, the first one is more decorative, and the second is easy to read.
+
+</br>
 
 _Choose font-family:_
 
 ![Choose font-family](/assets/images/readme-images/checking%20for%20font%20family.png)
 
+</br>
+
 - I chose colors from the background image.
+
+</br>
 
 _Choose colors:_
 
 ![Choose colors](/assets/images/readme-images/choosing%20colors.png)
+
+</br>
 
 yellow: rgb(235,226,22)
 
@@ -285,17 +346,25 @@ red: rgb(204,19,18)
 
 - I use CSS variables because it is more readable and easier to edit the code with them.
 
+</br>
+
 | Issue/Bug                    | Solution                                          |
 | ---------------------------- | ------------------------------------------------- |
 | The body was not long enough | I changed from height: 100% to min-height: 100vh. |
+
+</br>
 
 _Error in body height:_
 
 ![error in body height ](/assets/images/readme-images/error%20in%20body%20height.png)
 
+</br>
+
 _Corrected body height:_
 
 ![corrected body height ](</assets/images/readme-images/body%20height%20error%20fixed%20(and%20cut%20black%20part%20from%20image).png>)
+
+</br>
 
 ---
 
@@ -341,6 +410,8 @@ _Validating:_
 
 Tried on mobile, tablet, laptop and desktop screen view.
 
+</br>
+
 | What to do                                                                                                         | How to do                                                               | Expected outcome                                                                                                                                                                                                                        | Actual Outcome                                                                                                                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | When i first open the page the default question is visible                                                         | Open/refresh the page                                                   | Default question is visible                                                                                                                                                                                                             | Default question is visible                                                                                                                                                                                                             |
@@ -370,13 +441,19 @@ Tried on mobile, tablet, laptop and desktop screen view.
 | Correct CSS file                                                                                                   | Copy the CSS code to the W3C CSS validator website                      | There are no errors                                                                                                                                                                                                                     | There are no errors                                                                                                                                                                                                                     |
 | Correct HTML file                                                                                                  | Copy the HTML code to the W3C HTML validator website                    | There are no errors                                                                                                                                                                                                                     | There are no errors                                                                                                                                                                                                                     |
 
+</br>
+
 _Correct HTML file:_
 
 ![correct HTML file ](/assets/images/readme-images/html%20validator.png)
 
+</br>
+
 _Correct CSS file:_
 
 ![correct css file ](/assets/images/readme-images/css%20%20validator.png)
+
+</br>
 
 **Lighthouse check for desktop devices:**
 
@@ -387,9 +464,13 @@ _Correct CSS file:_
 - Best Practices: 100%
 - SEO: 100%
 
+</br>
+
 _Lighthouse desktop:_
 
 ![lighthouse desktop ](/assets/images/readme-images/lighthouse-desktop.png)
+
+</br>
 
 **Mobile:**
 
@@ -402,9 +483,13 @@ _Lighthouse mobile:_
 
 ![lighthouse mobile ](/assets/images/readme-images/light-house%20mobile.png)
 
+</br>
+
 _Am I responsive?:_
 
 ![am i responsive ](/assets/images/readme-images/am%20i%20responsive.png)
+
+</br>
 
 ---
 
