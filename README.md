@@ -485,7 +485,7 @@ _Lighthouse desktop:_
 
 _Lighthouse mobile:_
 
-![lighthouse mobile ](/assets/images/readme-images/light-house%20mobile.png)
+![lighthouse mobile ](/assets/images/readme-images/lighthouse%20mobile.png)
 
 </br>
 
@@ -518,7 +518,7 @@ _Video:_
 
 - [Def Leppard movie from YouTube](https://www.youtube.com/watch?v=FEHaEuiN3CA&ab_channel=PederRoos)
 
-_Code snippets:_
+_I learned new Code snippets from:_
 
 - _location.reload()_ from [Free code camp](https://www.freecodecamp.org/news/javascript-refresh-page-how-to-reload-a-page-in-js/)
 - _element.classList.contains(className)_ from [Stack overflow](https://stackoverflow.com/questions/5898656/check-if-an-element-contains-a-class-in-javascript)
