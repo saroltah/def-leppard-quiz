@@ -408,6 +408,7 @@ _Validating:_
 - [Am I responsive?](https://ui.dev/amiresponsive)
 - [W3C CSS validator](https://jigsaw.w3.org/css-validator/)
 - [W3C HTML validator](https://validator.w3.org/)
+- [JSHint](https://jshint.com/)
 
 ---
 
@@ -445,6 +446,7 @@ Tried on mobile, tablet, laptop and desktop screen view.
 | Responsive on all screen sizes                                                                                     | Open developer tools and check, using _Am I responsive?_ website        | It looks good, and all the functions are working properly in all screen sizes                                                                                                                                                           | It looks good, and all the functions are working properly in all screen sizes                                                                                                                                                           |
 | Correct CSS file                                                                                                   | Copy the CSS code to the W3C CSS validator website                      | There are no errors                                                                                                                                                                                                                     | There are no errors                                                                                                                                                                                                                     |
 | Correct HTML file                                                                                                  | Copy the HTML code to the W3C HTML validator website                    | There are no errors                                                                                                                                                                                                                     | There are no errors                                                                                                                                                                                                                     |
+| Correct Java Script file                                                                                                  | Copy the JS code to the JSHint website                    | There are no errors                                                                                                                                                                                                                     | no errors, just 1 warning, that in one loop my semantic might be confusing                                                                                                                                                                                                                     |
 
 </br>
 
@@ -473,7 +475,7 @@ _Correct CSS file:_
 
 _Lighthouse desktop:_
 
-![lighthouse desktop ](/assets/images/readme-images/lighthouse-desktop.png)
+![lighthouse desktop ](/assets/images/readme-images/lighthouse%20desktop.png)
 
 </br>
 
@@ -496,6 +498,10 @@ _Am I responsive?:_
 
 </br>
 
+_JSHint:_
+
+![js hint ](/assets/images/readme-images/jshint.png)
+</br>
 ---
 
 ## Credits
