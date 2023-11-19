@@ -75,7 +75,6 @@ h2,
   display: none;
 }
 #joe-image {
-  width: 70%;
   border: 2px solid var(--yellow-color);
 }
 button:hover,
