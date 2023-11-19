@@ -9,6 +9,7 @@ const currentPoints = document.getElementById("current-points");
 const answerButtons = document.getElementsByClassName("answer-buttons");
 const quizContainer = document.getElementById("quiz-container");
 const resultContainer = document.getElementById("result-container");
+const joeImage = document.getElementById("joe-image");
 let i = 0;
 
 // questions and answers
@@ -246,6 +247,7 @@ function showResult() {
 // show the question with index 0 and display answer buttons
 
 function displayFirst() {
+  joeImage.style.display = "none";
   for (let answerButton of answerButtons) {
     answerButton.style.display = "block";
   }

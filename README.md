@@ -46,7 +46,8 @@ _Goal of this website:_ to entertain people, to give some new information, and t
 
 ### Design:
 
-- The background image is the band's album cover, which is widely recognized - so I don't feel the need to put an image of the members also. I added a black background under the image in case the photo can not stretch more or if the image is not loading.
+- The background image is the band's album cover, which is widely recognized - so I don't feel the need to put an image of the whole band. I added a black background under the image in case the photo can not stretch more or if the image is not loading.
+- I added image of the singer, on which he is looking in the user's eye, as he would ask "Are you ready?". Also it is an old image - just like the album I used the cover-image of. I added yellow border, so it fits to the design.
 - I used a different section with a slightly transparent white background, to be able to read the text.
 - I chose the app's colors from the background album cover, so it matches together. I make them slightly transparent with _rgba_, so they are not so strong, and more readable.
 - I chose two different font-families, so the sections and functions are more separate. Also, the main font is more decorative while the questions and answers are much more readable. I also varied the font-weight and font-style qualities to make the little sections more separable and easier to follow.
@@ -64,10 +65,11 @@ _Goal of this website:_ to entertain people, to give some new information, and t
 
 ### Functionality:
 
-- The HTML has default question and default answers. I hide the answers, because they are not part of the game, and you can not score for clicking on them. Answer options are only show after the game starts.
+- The HTML has default question and default answers. I hide the answers, because they are not part of the game, and you can not score for clicking on them. Answer options are only show after the game starts. To make the start page more appealing, added an image which disappeares after the game starts.
 - I made sure that I created a function before I declared it - so the order of them is not the order of writing.
 - I changed _jpg_ to _webp_ for optimization.
 - I used only one _section_ because that holds headings, the rest of the content is in main container.
+- I added the same names for variables in JS as their class/id name, so it is easy to follow.
 
 ---
 
@@ -251,7 +253,7 @@ _Color change for wrong answer:_
 
 **Make default question as welcome text**
 
-- Change the default _Next_ button to _Start_, and after in the displayFirst() function change it back to _Next_.
+- Change the default _Next_ button to _Start_, and after in the displayFirst gi() function change it back to _Next_.
 
 - Change*Next* button’s innerHTML to _Show result_ for the last question.
 
@@ -508,7 +510,9 @@ _README.me document format:_
 
 _Image:_
 
-- [Amazon](https://www.amazon.com/dp/B09384G91N/ref=sspa_dk_detail_0?psc=1&pd_rd_i=B09384G91N&pd_rd_w=JOP99&content-id=amzn1.sym.eb7c1ac5-7c51-4df5-ba34-ca810f1f119a&pf_rd_p=eb7c1ac5-7c51-4df5-ba34-ca810f1f119a&pf_rd_r=3VS04E5FCC57VWC2AHYM&pd_rd_wg=Qv2IN&pd_rd_r=f73c69db-d547-4a05-b583-1c5fe9d2586b&s=home-garden&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw)
+- _Hysteria album cover:_ [Amazon](https://www.amazon.com/dp/B09384G91N/ref=sspa_dk_detail_0?psc=1&pd_rd_i=B09384G91N&pd_rd_w=JOP99&content-id=amzn1.sym.eb7c1ac5-7c51-4df5-ba34-ca810f1f119a&pf_rd_p=eb7c1ac5-7c51-4df5-ba34-ca810f1f119a&pf_rd_r=3VS04E5FCC57VWC2AHYM&pd_rd_wg=Qv2IN&pd_rd_r=f73c69db-d547-4a05-b583-1c5fe9d2586b&s=home-garden&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw)
+
+- _Joe Elliot:_ [80's music video page on Facebook](https://www.facebook.com/80sMusicVideoPage/photos/a.1841156106110182/2574502639442188/?type=3)
 
 _Video:_
 

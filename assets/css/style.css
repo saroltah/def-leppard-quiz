@@ -74,6 +74,10 @@ h2,
   box-shadow: 0px 0px 31px 19px rgba(73, 151, 209, 0.4);
   display: none;
 }
+#joe-image {
+  width: 70%;
+  border: 2px solid var(--yellow-color);
+}
 button:hover,
 a:hover {
   cursor: pointer;
