@@ -139,7 +139,7 @@ function changeQuestion() {
   option3.innerHTML = allQuestions[i].third;
 }
 
-// add function to delete background
+// delete background-colors
 
 function deleteBackgroundColor() {
   for (let answerButton of answerButtons) {
@@ -174,7 +174,7 @@ for (let answerButton of answerButtons) {
   });
 }
 
-// refresh page function to start again button
+// refresh the page
 
 function refreshPage() {
   document.location.reload();
@@ -199,7 +199,7 @@ const resultMessages = {
   videoLinkHigh: `Watch the ${movieLink} as your reward!</p>`,
 };
 
-// create start Again button
+// create start Again button which calls refresh page function
 
 const startAgainButton = document.createElement("button");
 startAgainButton.id = "start-again";
@@ -243,12 +243,38 @@ function showResult() {
   }
 }
 
-// next question button loads the next question
-nextQuestion.addEventListener("click", showNext);
-function showNext() {
+// show the question with index 0 and display answer buttons
+
+function displayFirst() {
+  for (let answerButton of answerButtons) {
+    answerButton.style.display = "block";
+  }
   nextQuestion.innerHTML = "Next";
+  question.innerHTML = allQuestions[0].question;
+  option1.innerHTML = allQuestions[0].first;
+  option2.innerHTML = allQuestions[0].second;
+  option3.innerHTML = allQuestions[0].third;
+  deleteBackgroundColor();
+}
+
+// show the questions with index 1 or bigger
+//call the function to show the result
+
+function showNext() {
   i += 1;
   changeQuestion();
   deleteBackgroundColor();
   showResult();
+}
+
+//call the function to show the questions
+
+nextQuestion.addEventListener("click", start);
+
+function start() {
+  if (nextQuestion.innerHTML === "Start") {
+    displayFirst();
+  } else {
+    showNext();
+  }
 }

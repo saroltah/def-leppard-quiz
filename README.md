@@ -64,7 +64,7 @@ _Goal of this website:_ to entertain people, to give some new information, and t
 
 ### Functionality:
 
-- I put the _showNext()_ function in HTML _onclick_, instead of adding an _eventListener_, because this way the HTML is the default, and I can create my home page with the yellow _Start_ button and unclickable answers.
+- The HTML question is the default, and I can create my home page with the yellow _Start_ button and unclickable answers.
 - I made sure that I created a function before I declared it - so the order of them is not the order of writing.
 - I changed _jpg_ to _webp_ for optimization.
 - I didn't make semantically sections because there were no headings in each. Instead, I used _divs_.
