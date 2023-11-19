@@ -47,7 +47,7 @@ _Goal of this website:_ to entertain people, to give some new information, and t
 ### Design:
 
 - The background image is the band's album cover, which is widely recognized - so I don't feel the need to put an image of the whole band. I added a black background under the image in case the photo can not stretch more or if the image is not loading.
-- I added image of the singer, on which he is looking in the user's eye, as he would ask "Are you ready?". Also it is an old image - just like the album I used the cover-image of. I added yellow border, so it fits to the design.
+- I added image of the singer, on which he is looking in the user's eye, as he would ask "Are you ready?". Also it is an old image - just like the album I used the cover-image of. I added yellow border, so it fits to the design. I also left it's shape without _border-radius_, so it fit's to the whole quiz's shape.
 - I used a different section with a slightly transparent white background, to be able to read the text.
 - I chose the app's colors from the background album cover, so it matches together. I make them slightly transparent with _rgba_, so they are not so strong, and more readable.
 - I chose two different font-families, so the sections and functions are more separate. Also, the main font is more decorative while the questions and answers are much more readable. I also varied the font-weight and font-style qualities to make the little sections more separable and easier to follow.
