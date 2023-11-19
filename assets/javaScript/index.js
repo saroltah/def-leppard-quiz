@@ -9,7 +9,7 @@ const currentPoints = document.getElementById("current-points");
 const answerButtons = document.getElementsByClassName("answer-buttons");
 const quizContainer = document.getElementById("quiz-container");
 const resultContainer = document.getElementById("result-container");
-let i = -1;
+let i = 0;
 
 // questions and answers
 
@@ -244,6 +244,7 @@ function showResult() {
 }
 
 // next question button loads the next question
+nextQuestion.addEventListener("click", showNext);
 function showNext() {
   nextQuestion.innerHTML = "Next";
   i += 1;
