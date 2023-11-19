@@ -22,7 +22,7 @@ _Goal of this website:_ to entertain people, to give some new information, and t
 
 ### Questions:
 
-- For the default question, all the answers are true, and the game is not started - the default question is not part of the game, which is why the answers don’t turn to color. When the user clicks _Start_, that is when the game starts.
+- There is a default question - "Are you ready to start the quiz?" When the user clicks _Start_, that is when the game starts.
 - I didn’t number the questions, I think not knowing how many questions left makes the user more alert to answer correctly. I also don’t think the user quits in the middle because it is not that long.
 
 ### Answer/next buttons:
@@ -57,17 +57,17 @@ _Goal of this website:_ to entertain people, to give some new information, and t
 
 - The name of the page is on the top.
 - Then h2 says what the page is about.
-- The default question shows 3 answers and just leads up the game - all true and a yellow _Start button_ indicates to start the game. This way the user already gets familiar with the look, and logic of the game
+- The default question does not show answers, _Start button_ indicates to start the game. This way the user can decide when to start the game.
 - Under the questions the _Points_ can be seen: 0/15 - so the user sees that there will be 15 questions. ()
 - After starting the user sees the question _bold_, so the eye leads there, the cursor changes, so it indicates to click on, and the _Next_ button is the same as the _Start button_, so that indicates to click on that for the next question.
 - After the 15th question, the “Result” section nicely Congratulates the result and tells the obtained points. Then the “less important” evaluation is under it, and the _Start again_ button is yellow to be easy to spot. I kept big spaces between the sections, so the eye could easily look through them.
 
 ### Functionality:
 
-- The HTML question is the default, and I can create my home page with the yellow _Start_ button and unclickable answers.
+- The HTML has default question and default answers. I hide the answers, because they are not part of the game, and you can not score for clicking on them. Answer options are only show after the game starts.
 - I made sure that I created a function before I declared it - so the order of them is not the order of writing.
 - I changed _jpg_ to _webp_ for optimization.
-- I didn't make semantically sections because there were no headings in each. Instead, I used _divs_.
+- I used only one _section_ because that holds headings, the rest of the content is in main container.
 
 ---
 
@@ -194,6 +194,8 @@ _Figure out what functions I need:_
 | It only shows the last question and only that one, it doesn't change for the button. - it overwrites always the previous one                  | I realized I didn’t need a loop, instead, I made _i_ a variable and made _showNext()_ function that always adds 1 to the _i_ when the Next button is clicked. Add the _i_ -1 value as default, so it starts at 0 - first question.                                                                                                                                  |
 | It turns green for the right answer, but when I change the question that option stays green.                                                  | I set the _deleteBackgroundColor()_ function                                                                                                                                                                                                                                                                                                                        |
 | I can click on more options.                                                                                                                  | I set up conditional, if something was clicked on, the _Next_ button gets a property. If that property is off, only in that case can the function run. I also remove that property when we change the question.                                                                                                                                                     |
+| First I displayed default answers. But since they didn't trigger the functions that should happen by clicking, console threw error message.   | I hid the default _answer buttons_ and made _showFirst()_ function, where it displays the buttons after the Start.                                                                                                                                                                                                                                                  |
+| The first (index 0) question is not shown.                                                                                                    | I display the first question in _showFirst()_ function. Then I created a new function _start()_ which decides if it should show first question or the next ones with the _showNext()_ function which every time raises the index number.                                                                                                                            |
 
 </br>
 
@@ -249,7 +251,7 @@ _Color change for wrong answer:_
 
 **Make default question as welcome text**
 
-- Change the default _Next_ button to _Start_, and after in the showNext() function change it back to _Next_.
+- Change the default _Next_ button to _Start_, and after in the displayFirst() function change it back to _Next_.
 
 - Change*Next* button’s innerHTML to _Show result_ for the last question.
 
