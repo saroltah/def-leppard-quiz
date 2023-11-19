@@ -397,6 +397,7 @@ _Font family:_
 _Images and icons:_
 
 - [Convert io](https://convertio.co/jpg-webp/)
+- [Favicon](https://favicon.io/favicon-generator/)
 
 _Color palette:_
 
@@ -508,7 +509,7 @@ _README.me document format:_
 
 - Inspired by my own [Yoga project](https://github.com/saroltah/yoga-project)
 
-_Image:_
+_Images:_
 
 - _Hysteria album cover:_ [Amazon](https://www.amazon.com/dp/B09384G91N/ref=sspa_dk_detail_0?psc=1&pd_rd_i=B09384G91N&pd_rd_w=JOP99&content-id=amzn1.sym.eb7c1ac5-7c51-4df5-ba34-ca810f1f119a&pf_rd_p=eb7c1ac5-7c51-4df5-ba34-ca810f1f119a&pf_rd_r=3VS04E5FCC57VWC2AHYM&pd_rd_wg=Qv2IN&pd_rd_r=f73c69db-d547-4a05-b583-1c5fe9d2586b&s=home-garden&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw)
 
