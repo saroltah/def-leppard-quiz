@@ -528,7 +528,7 @@ _README.md document format:_
 
 _Images:_
 
-- _Hysteria album cover:_ [Amazon](https://www.amazon.se/Hysteria-Def-Leppard/dp/B071JN3LMZ/ref=pd_vtp_h_pd_vtp_h_d_sccl_1/262-6228853-8641138?pd_rd_w=HgJs6&content-id=amzn1.sym.97e287aa-fd6a-4320-aa41-939198333e88&pf_rd_p=97e287aa-fd6a-4320-aa41-939198333e88&pf_rd_r=QCYMBVMNWVG2Q32W71M0&pd_rd_wg=wiNft&pd_rd_r=9c075985-2016-46d5-acb8-9f4671adb0fa&pd_rd_i=B071JN3LMZ&psc=1)
+- _Hysteria album cover:_ [Amazon](https://www.amazon.com/INTIMO-Leppard-Blanket-Hysteria-Fleece/dp/B0937LYH68/ref=sr_1_5?crid=28PUR158ZNVOM&keywords=def+leppard+blanket&qid=1700510353&sprefix=def+leppard+bla%2Caps%2C283&sr=8-5)
 
 - _Joe Elliot:_ [80's music video page on Facebook](https://www.facebook.com/80sMusicVideoPage/photos/a.1841156106110182/2574502639442188/?type=3)
 
