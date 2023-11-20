@@ -27,7 +27,7 @@ _Goal of this website:_ to entertain people, to give some new information, and t
 
 ### Answer/next buttons:
 
-- When the user clicks on the right answer, it turns green, and the _Next_ button turns yellow, so the user can see, that the answer is submitted, and it is time for the next question. If the user decides they don’t want to answer, it is possible, but they lose the chance of getting points. Once you choose the answer, you can not click on other answers.
+- When the user clicks on the right answer, it turns green, and the _Next_ button turns yellow, so the user can see, that the answer is submitted, and it is time for the next question. If the user decides they don’t want to answer, it is possible, but they lose the chance of getting points. Once the user chooses the answer, they can not click on other answers.
 - Since they are buttons, we don't need a separate Submit button - that is easier to use on mobile devices.
 
 ### Show result:
@@ -47,25 +47,25 @@ _Goal of this website:_ to entertain people, to give some new information, and t
 ### Design:
 
 - The background image is the band's album cover, which is widely recognized - so I don't feel the need to put an image of the whole band. I added a black background under the image in case the photo can not stretch more or if the image is not loading.
-- I added image of the singer, on which he is looking in the user's eye, as he would ask "Are you ready?". Also it is an old image - just like the album I used the cover-image of. I added yellow border, so it fits to the design. I also left it's shape without _border-radius_, so it fit's to the whole quiz's shape.
-- I used a different section with a slightly transparent white background, to be able to read the text.
-- I chose the app's colors from the background album cover, so it matches together. I make them slightly transparent with _rgba_, so they are not so strong, and more readable.
+- I added image of the singer, on which he is looking in the user's eye, as he would ask "Are you ready?". Also it is an old image - just like the album I used the cover-image of. I added yellow border, so it fits to the design. I also left its shape without _border-radius_, so it fits to the _main contanier_'s shape.
+- I created a different section over the image with a slightly transparent white background, to be able to read the text.
+- I chose the app's colors from the background album cover, so it matches together. I made them slightly transparent with _rgba_, so they are not so strong, and more readable.
 - I chose two different font-families, so the sections and functions are more separate. Also, the main font is more decorative while the questions and answers are much more readable. I also varied the font-weight and font-style qualities to make the little sections more separable and easier to follow.
 - _Points_ section under the _Next_ button has a fun but light border, to be seen but does not take the attention away from the questions.
-- The result page shows the obtained point _bold_ because that is the main result that affects the text evaluation. The _Def Leppard movie link_ is blue, and I also kept little space in front of it and after it, so it indicates that is a different part of the text, that the user can click on.
+- The result page shows the obtained point _bold_ because that is the main result that affects the evaluation text. The _Def Leppard movie link_ is blue, and I also kept little space in front of it and after it, so it indicates that it is a different part of the text, that the user can click on.
 
 ### Structure
 
 - The name of the page is on the top.
 - Then h2 says what the page is about.
-- The default question does not show answers, _Start button_ indicates to start the game. This way the user can decide when to start the game.
-- Under the questions the _Points_ can be seen: 0/15 - so the user sees that there will be 15 questions. ()
-- After starting the user sees the question _bold_, so the eye leads there, the cursor changes, so it indicates to click on, and the _Next_ button is the same as the _Start button_, so that indicates to click on that for the next question.
-- After the 15th question, the “Result” section nicely Congratulates the result and tells the obtained points. Then the “less important” evaluation is under it, and the _Start again_ button is yellow to be easy to spot. I kept big spaces between the sections, so the eye could easily look through them.
+- The default question does not show answers, _Start button_ indicates to start the game. This way the user can decide when to start the game. The image is between the default question and _Start_ button - where the answers will be.
+- On the bottom of the quiz _Points_ can be seen: 0/15 - so the user sees that there will be 15 questions. 
+- The questions are  _bold_, so the eye leads there, the cursor changes, so it indicates to click on, and the _Next_ button is the same as the _Start button_, so that indicates to click on that for the next question.
+- After the 15th question, the _result_ section nicely congratulates for the result and tells the obtained points. Then the evaluation is under it, and the _Start again_ button is yellow to be easy to spot. I kept big spaces between the sections, so the eye could easily look through them.
 
 ### Functionality:
 
-- The HTML has default question and default answers. I hide the answers, because they are not part of the game, and you can not score for clicking on them. Answer options are only show after the game starts. To make the start page more appealing, added an image which disappeares after the game starts.
+- The HTML has default question and default answers. I hide the answers, because they are not part of the game, and you can not score for clicking on them. Answer options are only shown after the game starts. To make the start page more appealing, added an image which disappeares after the game starts.
 - I made sure that I created a function before I declared it - so the order of them is not the order of writing.
 - I changed _jpg_ to _webp_ for optimization.
 - I used only one _section_ because that holds headings, the rest of the content is in main container.
@@ -132,16 +132,18 @@ I created the initial folders, files, and links, then published the page on GitH
 
     V. Now the clone is ready to be used.
 
----
-
-### 4.
-
-Added basic HTML with one default question, sections, and text.
 </br>
 
 | Bug / Issue                                                     | Solution                                                      |
 | --------------------------------------------------------------- | ------------------------------------------------------------- |
 | My basic (empty) HTML didn't load, and couldn’t find the reason | I set up the document again, and then it functioned properly. |
+---
+
+</br>
+
+### 4.
+
+Added basic HTML with one default question, sections, and text.
 
 </br>
 
@@ -175,28 +177,28 @@ _Figure out what functions I need:_
 
 **Add questions, and _Next_ button to change question:**
 
-- I use an array for the questions, so I can loop through, and I put objects in the arrays. - Every question has three options, and a "right" answer, which is the same as one of the options.
+- I use an array for the questions, so I can loop through, and I put objects in the array. - Every question has three options, and a "right" answer, which is the same as one of the options.
 - I loop through the questions/answers and put them into the inner HTML with the _changeQuestion()_ function.
 - First I made allQuestions and allAnswers as separate arrays, but then I put them all into one allQuestions array because it is shorter and simpler.
 
 </br>
 
-**Add options - answers color when they are clicked:**
+**Add color to the answers when they are clicked:**
 
-- I give eventListener to the button that is clicked. I tested first with alert() and with console.log.
-- I use an _if_ statement to check if it is right - the text content is the same as the "right value" in the object.
+- I give _eventListener_ to the button that is clicked. I tested first with alert() and with console.log.
+- I use an _if_ statement to check if it is right - the text content is the same as the _right value_ in the object.
 - If it is _right_ get a class, if it is wrong get another class. If any of them is clicked, the _Next_ button gets the property(color). If the property is on, the function does not run.
-- When the questions are changing, all the properties and classes are removed to start again.
+- When the questions are changing, all the properties and classes are removed  with the _deleteBackgroundColor()_ function.
 
 </br>
 
 | Issue/Bug                                                                                                                                     | Solution                                                                                                                                                                                                                                                                                                                                                            |
 | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | I used the index number as a value instead of a string for the “right” value in the object. So the changeQuestion() function was not working. | _Console.log_ my arrays, to see if they are correct - yes. Noticed that W h i are the first letters of the question. I wrote accidentally All Questions instead of All Answers so it took the letters out. Then Answers got undefined because I realized I work with objects inside an array. Objects have no index numbers. So I corrected the numbers to strings. |
-| It only shows the last question and only that one, it doesn't change for the button. - it overwrites always the previous one                  | I realized I didn’t need a loop, instead, I made _i_ a variable and made _showNext()_ function that always adds 1 to the _i_ when the Next button is clicked. Add the _i_ -1 value as default, so it starts at 0 - first question.                                                                                                                                  |
+| It only shows the last question and only that one, it doesn't change for the button. - it overwrites always the previous one                  | I realized I didn’t need a loop, instead, I made _i_ a variable and made _showNext()_ function that always adds 1 to the _i_ when the Next button is  clicked. _i_ = 0 as default.                                                                                                                                 |
 | It turns green for the right answer, but when I change the question that option stays green.                                                  | I set the _deleteBackgroundColor()_ function                                                                                                                                                                                                                                                                                                                        |
-| I can click on more options.                                                                                                                  | I set up conditional, if something was clicked on, the _Next_ button gets a property. If that property is off, only in that case can the function run. I also remove that property when we change the question.                                                                                                                                                     |
-| First I displayed default answers. But since they didn't trigger the functions that should happen by clicking, console threw error message.   | I hid the default _answer buttons_ and made _showFirst()_ function, where it displays the buttons after the Start.                                                                                                                                                                                                                                                  |
+| I can click on more options.                                                                                                                  | I set up conditional, if something was clicked on, the _Next_ button gets a property (yellow color). If that property is off, only in that case can the function run. I also remove that property when we change the question.                                                                                                                                                     |
+| First I displayed default answers. But since they didn't trigger the functions that should happen by clicking, the console threw an error message.   | I hid the default _answer buttons_ and made _showFirst()_ function, which displays the buttons after the Start.                                                                                                                                                                                                                                                  |
 | The first (index 0) question is not shown.                                                                                                    | I display the first question in _showFirst()_ function. Then I created a new function _start()_ which decides if it should show first question or the next ones with the _showNext()_ function which every time raises the index number.                                                                                                                            |
 
 </br>
@@ -219,7 +221,7 @@ _Color change for wrong answer:_
 
 </br>
 
-**Add a point for the right answer**
+**Add one point when the right answer is clicked**
 
 - Change the innerHTML of the _current points span_ if the option background turns green.
 - Created _old points_ variable which is always the current written out point - and the function adds 1, and then that becomes the new _old point_.
@@ -240,14 +242,14 @@ _Color change for wrong answer:_
 
 **Add the result and change the innerHTML after the last question**
 
-- The showResult() function loads when it arrives at the last question, it changes the innerHTML to the result page with the _Start Again_ button.
+- The _showResult()_ function loads when it arrives at the last question, it changes the innerHTML to the result page and shows the _Start Again_ button.
 
 </br>
 
 | Issue/Bug                                                   | Solution                                              |
 | ----------------------------------------------------------- | ----------------------------------------------------- |
 | The last question was deleted because the innerHTML changed | I made one last object with no real values(last-last) |
-| It couldn’t refer to current points,${} was not working.    | Added _.textContent_ to the _currentPoints_.          |
+| It couldn’t refer to current points, ${} was not working.    | Added _textContent_ to the _currentPoints_.          |
 
 </br>
 
