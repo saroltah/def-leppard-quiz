@@ -124,11 +124,11 @@ I created the initial folders, files, and links, then published the page on GitH
     I. Open the GitHub repository
     https://github.com/saroltah/def-leppard-quiz
 
-    II. Select the green _Code_ dropdown, under _Clone_ copy the HTTPS link
+    II. Select the green "Code" dropdown, under "Clone" copy the HTTPS link
 
     III. Open your IDE and your chosen directory in it
 
-    IV. Open your terminal and type _git clone_ and paste the link
+    IV. Open your terminal and type "git clone" and paste the link
 
     V. Now the clone is ready to be used.
 
